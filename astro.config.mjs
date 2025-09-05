@@ -12,11 +12,13 @@ import rehypeKatex from "rehype-katex";
 
 import remarkMath from "remark-math";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.saroprock.com",
   output: "server",
-  adapter: vercel(),
+  adapter: netlify(),
   vite: {
     plugins: [tailwindcss()],
   },
