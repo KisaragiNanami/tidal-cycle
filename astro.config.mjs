@@ -18,7 +18,7 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://www.saroprock.com",
   output: "server",
-  adapter: netlify(),
+  adapter: vercel(),
   vite: {
     plugins: [tailwindcss()],
   },

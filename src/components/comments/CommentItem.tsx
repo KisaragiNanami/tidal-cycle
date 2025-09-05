@@ -29,7 +29,7 @@ interface Props {
 }
 
 const badgeMap: { [key: string]: string } = {
-  "evesunmaple@outlook.com": "博主",
+  "kisaragi.nanami@qq.com": "博主",
 };
 
 // 重命名为 CommentItemComponent 以便在文件内部递归调用
