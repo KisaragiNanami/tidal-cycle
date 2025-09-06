@@ -163,8 +163,8 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
     width: 1200,
     height: 630,
     fonts: [
-      { name: "Source Han Serif SC", data: fontRegular, weight: 400, style: "normal" },
-      { name: "Source Han Serif SC", data: fontBold, weight: 700, style: "normal" },
+      { name: "Noto Serif SC", data: fontRegular, weight: 400, style: "normal" },
+      { name: "Noto Serif SC", data: fontBold, weight: 700, style: "normal" },
     ],
   });
 
