@@ -39,13 +39,13 @@ export async function GET(context: any) {
       guid: post.longUrl,
       content,
       pubDate: new Date(pubDate),
-      customData: `<dc:creator><![CDATA[サン猫の時間漂流]]></dc:creator>`,
+      customData: `<dc:creator><![CDATA[七海の心象素描]]></dc:creator>`,
     };
   }));
 
   return rss({
-    title: "サン猫の時間漂流",
-    description: "一个孤独的地方，散落着一个人的人生碎片",
+    title: "七海の心象素描",
+    description: "ああかがやきの四月の底を、はぎしり燃えてゆききする。",
     site: context.site.toString(),
     items,
     stylesheet: "/rss.xsl",

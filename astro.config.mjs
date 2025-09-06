@@ -16,7 +16,7 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://tidal-cycle.vercel.app",
+  site: "https://nanami7.top",
   output: "server",
   adapter: vercel(),
   vite: {
