@@ -38,7 +38,7 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
         padding: "60px",
         background: "linear-gradient(135deg, #0f172a, #1e293b)",
         color: "#fff",
-        fontFamily: "\"Noto Sans SC\"",
+        fontFamily: "\"Noto Serif CJK SC\"",
         position: "relative",
       },
       children: [
@@ -163,8 +163,8 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
     width: 1200,
     height: 630,
     fonts: [
-      { name: "Noto Sans SC", data: fontRegular, weight: 400, style: "normal" },
-      { name: "Noto Sans SC", data: fontBold, weight: 700, style: "normal" },
+      { name: "Source Han Serif SC", data: fontRegular, weight: 400, style: "normal" },
+      { name: "Source Han Serif SC", data: fontBold, weight: 700, style: "normal" },
     ],
   });
 

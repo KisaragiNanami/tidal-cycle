@@ -18,23 +18,23 @@
 }
 
 @font-face {
-  font-family: "Noto Serif CJK SC";
-  src: url("/fonts/Noto Serif CJK SC.woff2") format("woff2");
+  font-family: "Source Han Serif SC";
+  src: url("/fonts/SourceHanSerifSC-Regular.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
 }
 
-/* @font-face {
+@font-face {
   font-family: "Fira Code";
   src: url("/fonts/FiraCode-Regular.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-} */
+}
 
 code {
-  font-family: "Noto Serif CJK SC";
+  font-family: "Fira Code";
   font-size: 0.875rem;
   line-height: 1.5;
 }
