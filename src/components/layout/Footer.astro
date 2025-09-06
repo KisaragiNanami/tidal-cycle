@@ -17,8 +17,8 @@ async function getRepoStars(): Promise<number | null> {
     return cachedData.stars;
   }
   try {
-    const owner = "EveSunMaple";
-    const repo = "SaroProck";
+    const owner = "KisaragiNanami";
+    const repo = "tidal-cycle";
     const token = import.meta.env.GITHUB_TOKEN;
     const response = await fetch(
       `https://api.github.com/repos/${owner}/${repo}`,
