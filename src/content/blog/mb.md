@@ -2,7 +2,6 @@
 title: 清楚？明白？
 description: 很多时候我们连定义都没下就开始讨论了
 pubDate: 02 18 2024
-url: 32542
 tags:
   - 随笔
 categories:
