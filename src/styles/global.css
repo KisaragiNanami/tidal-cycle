@@ -32,6 +32,13 @@
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Noto Serif JP";
+  src: url("/fonts/NotoSerifJP-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
 
 code {
   font-family: "Fira Code";

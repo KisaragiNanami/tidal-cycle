@@ -79,6 +79,14 @@ const socialImageURL = new URL(image, Astro.site);
     <meta name="twitter:title" content={finalTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageURL} />
+    <style>
+    @font-face{
+      font-family: "Source Han Serif SC", "Noto Serif JP", "Fira Code";/* 自定义字体引用名称 */
+    }
+    *{
+      font-family: "Source Han Serif SC", "Noto Serif JP", "Fira Code"; !important;
+    }
+</style>
   </head>
   <body class="bg-base-100 text-base-content min-h-screen topography">
     <Header siteTitle={SITE_TITLE} />
