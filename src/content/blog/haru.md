@@ -4,7 +4,8 @@ tags:
  - 宫泽贤治
 categories:
  - 诗
-pubDate: 2025-06-12 17:02:00
+pubDate: 2025-06-12
+description: '这是我 Astro 博客的第一篇文章。'
 ---
 
 

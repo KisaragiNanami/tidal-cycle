@@ -12,7 +12,6 @@ categories:
   - OI学习笔记
   - 线性代数
 pubDate: 2023-08-13 00:00:00
-description: ...
 ---
 
 ## 前言
