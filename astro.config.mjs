@@ -11,6 +11,7 @@ import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
 
 import remarkMath from "remark-math";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://nanami7.top",
@@ -20,7 +21,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [expressiveCode(), mdx(), react(), sitemap(), compress(), terser({ compress: true, mangle: true }), icon(), decapCmsOauth()],
+  integrations: [expressiveCode(), mdx(), react(), sitemap(), compress(), terser({ compress: true, mangle: true }), icon()],
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
