@@ -1,6 +1,7 @@
 ---
 // src/pages/random.astro
 import { getCollection } from "astro:content";
+export const prerender = true;
 
 // 1. 获取所有已发布的博客文章
 const allPosts = await getCollection("blog", ({ data }) => data.draft !== true);

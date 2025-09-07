@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "license": "GPL-3.0",
+  "postbuild": "pagefind --site dist --output-path .vercel/output/static/pagefind",
   "scripts": {
     "dev": "astro dev",
     "build": "cpy 'src/content/blog/photo/**' public/photo && astro build",
@@ -26,6 +27,7 @@
     "@types/react-dom": "^19.1.6",
     "@types/sanitize-html": "^2.16.0",
     "astro": "^5.13.5",
+    "astro-decap-cms-oauth": "^0.5.1",
     "astro-expressive-code": "^0.41.3",
     "astro-icon": "^1.1.5",
     "astro-iconify": "^1.2.0",

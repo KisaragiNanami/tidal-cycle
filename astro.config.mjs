@@ -14,6 +14,8 @@ import remarkMath from "remark-math";
 
 import netlify from "@astrojs/netlify";
 
+import decapCmsOauth from "astro-decap-cms-oauth";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://nanami7.top",
@@ -23,9 +25,13 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [expressiveCode(), mdx(), react(), sitemap(), compress(), terser({ compress: true, mangle: true }), icon()],
+  integrations: [expressiveCode(), mdx(), react(), sitemap(), compress(), terser({ compress: true, mangle: true }), icon(), decapCmsOauth()],
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
+});
+export default defineConfig({
+  output: 'server',
+  adapter: vercel(),
 });
