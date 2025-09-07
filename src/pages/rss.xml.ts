@@ -2,8 +2,6 @@ import rss from "@astrojs/rss";
 import { marked } from "marked";
 import { getAllPostsWithShortLinks } from "@/lib/blog";
 
-export const prerender = true;
-
 export async function GET(context: any) {
   if (!context.site) {
     throw new Error("A `site` property is required in your astro.config.mjs for this RSS feed to work.");
