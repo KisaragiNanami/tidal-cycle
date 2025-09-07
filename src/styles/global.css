@@ -20,7 +20,7 @@
 @font-face {
   font-family: "Noto Serif SC";
   src: url("/fonts/NotoSerifSC-Medium.woff2") format("woff2");
-  font-weight: 500 900;
+  font-weight: 100 900;
   font-display: swap;
   font-style: normal;
 }
@@ -34,8 +34,8 @@
 }
 @font-face {
   font-family: "Noto Serif JP";
-  src: url("/fonts/NotoSerifJP-Regular.woff2") format("woff2");
-  font-weight: 500 900;
+  src: url("/fonts/NotoSerifJP-Medium.woff2") format("woff2");
+  font-weight: 100 900;
   font-display: swap;
   font-style: normal;
 }
@@ -117,5 +117,5 @@ code {
   animation: like-pulse 0.4s ease-in-out;
 }
 @theme {
-  --font-sans: 'Noto Serif SC', 'Noto Serif JP','sans-serif';
+  --font-sans: 'Noto Serif SC', 'Noto Serif JP', 'Fira Code', 'sans-serif';
 }
