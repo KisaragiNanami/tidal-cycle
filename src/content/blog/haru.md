@@ -1,8 +1,10 @@
 ---
-title:『春と修羅』序
-tags: 宫泽贤治
-categories: 诗
-pubDate: 2025-06-12 17:02
+title: 『春と修羅』序
+tags:
+ - 宫泽贤治
+categories:
+ - 诗
+pubDate: 2025-06-12 17:02:00
 ---
 
 
