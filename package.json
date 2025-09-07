@@ -3,7 +3,6 @@
   "type": "module",
   "version": "0.0.1",
   "license": "GPL-3.0",
-  "postbuild": "pagefind --site dist --output-path .vercel/output/static/pagefind",
   "scripts": {
     "dev": "astro dev",
     "build": "cpy 'src/content/blog/photo/**' public/photo && astro build",

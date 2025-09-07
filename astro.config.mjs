@@ -31,7 +31,3 @@ export default defineConfig({
     rehypePlugins: [rehypeKatex],
   },
 });
-export default defineConfig({
-  output: 'server',
-  adapter: vercel(),
-});
