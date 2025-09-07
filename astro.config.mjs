@@ -11,11 +11,6 @@ import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
 
 import remarkMath from "remark-math";
-
-import netlify from "@astrojs/netlify";
-
-import decapCmsOauth from "astro-decap-cms-oauth";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://nanami7.top",
