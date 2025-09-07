@@ -26,7 +26,6 @@
     "@types/react-dom": "^19.1.6",
     "@types/sanitize-html": "^2.16.0",
     "astro": "^5.13.5",
-    "astro-decap-cms-oauth": "^0.5.1",
     "astro-expressive-code": "^0.41.3",
     "astro-icon": "^1.1.5",
     "astro-iconify": "^1.2.0",

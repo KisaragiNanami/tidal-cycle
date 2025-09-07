@@ -53,9 +53,6 @@ importers:
       astro:
         specifier: ^5.13.5
         version: 5.13.5(@netlify/blobs@10.0.10)(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(yaml@2.8.0)
-      astro-decap-cms-oauth:
-        specifier: ^0.5.1
-        version: 0.5.1(astro@5.13.5(@netlify/blobs@10.0.10)(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(yaml@2.8.0))
       astro-expressive-code:
         specifier: ^0.41.3
         version: 0.41.3(astro@5.13.5(@netlify/blobs@10.0.10)(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(yaml@2.8.0))
@@ -2630,11 +2627,6 @@ packages:
   astring@1.9.0:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
-
-  astro-decap-cms-oauth@0.5.1:
-    resolution: {integrity: sha512-dxIfwj+E5XuUCGhbTWVA0XRLK0qXDKvflC0Jy4n0H219RpGXcHCQ3lmwE8aNO2/R16dSRJ//xoBjkuqSpYK5CQ==}
-    peerDependencies:
-      astro: ^5.0.0
 
   astro-eslint-parser@1.2.2:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
@@ -9812,10 +9804,6 @@ snapshots:
   ast-module-types@6.0.1: {}
 
   astring@1.9.0: {}
-
-  astro-decap-cms-oauth@0.5.1(astro@5.13.5(@netlify/blobs@10.0.10)(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(yaml@2.8.0)):
-    dependencies:
-      astro: 5.13.5(@netlify/blobs@10.0.10)(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(yaml@2.8.0)
 
   astro-eslint-parser@1.2.2:
     dependencies:
