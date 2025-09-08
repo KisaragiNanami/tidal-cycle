@@ -4,7 +4,7 @@ export const ADMIN_USER = {
   nickname: "如月七海",
   email: "kisanagi.nanami@qq.com",
   website: "https://kisanami.top",
-  avatar: "/public/avatar.webp",
+  avatar: "/avatar.webp",
 };
 
 // 你不希望用户使用的名称与邮箱
