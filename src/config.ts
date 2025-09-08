@@ -2,8 +2,8 @@
 // 针对博主特定的数据
 export const ADMIN_USER = {
   nickname: "如月七海",
-  email: "kisanagi.nanami@qq.com",
-  website: "https://kisanami.top",
+  email: "2959874980@qq.com",
+  website: "https://nanami7.top",
   avatar: "/avatar.webp",
 };
 

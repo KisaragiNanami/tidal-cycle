@@ -241,11 +241,11 @@ const CommentsWrapper: React.FC<Props> = ({ identifier, commentType, displayMode
       />
       {displayMode === "full" && (
         <div className="mt-6 text-sm text-right">
-          {/* 本评论区由
+          本评论区由
           {" "}
-          <a href="https://github.com/KisaragiNanami" className="text-primary" target="_blank" rel="noopener noreferrer">EveSunMaple</a>
+          <a href="https://github.com/EveSunMaple" className="text-primary" target="_blank" rel="noopener noreferrer">EveSunMaple</a>
           {" "}
-          自主开发 */}
+          自主开发
         </div>
       )}
     </div>
