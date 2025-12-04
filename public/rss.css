@@ -49,8 +49,7 @@
 
 /* 4. 全局样式 */
 body {
-  font-family: "Noto Serif SC", "Noto Serif JP", "Fira Code";
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Arial", sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
   line-height: 1.6;
   background-color: oklch(var(--b1));
   color: oklch(var(--bc));
@@ -118,6 +117,23 @@ body {
   color: oklch(var(--bc) / 0.7);
 }
 
+/* 7. "在 Folo 订阅" 按钮 (模仿 DaisyUI 的 btn) */
+.subscribe-button.folo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem; /* 稍微增加间距 */
+  background-color: #ff5c00; /* 使用 Folo 的主色 */
+  color: white;
+  padding: 0.75rem 1.25rem; /* 12px 20px */
+  border-radius: 0.5rem; /* 8px */
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* ✨ 修改: 使用更平滑的 cubic-bezier */
+  box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
 
 .subscribe-button.folo:hover {
   background-color: #e65300; /* ✨ 修改: 使用更深的颜色代替透明度 */

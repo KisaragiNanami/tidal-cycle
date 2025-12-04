@@ -24,13 +24,13 @@
   font-display: swap;
   font-style: normal;
 }
-/* @font-face {
+@font-face {
   font-family: "Maple";
   src: url("/fonts/MapleMono-Regular.ttf.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-} */
+}
 
 @font-face {
   font-family: "Fira Code";
