@@ -41,7 +41,7 @@ export async function GET({
         padding: "60px",
         background: "linear-gradient(135deg, #0f172a, #1e293b)",
         color: "#fff",
-        fontFamily: '"Noto Serif SC"',
+        fontFamily: '"Maple"',
         position: "relative",
       },
       children: [
@@ -63,7 +63,7 @@ export async function GET({
                 type: "div",
                 props: {
                   style: { fontSize: "28px", fontWeight: 600 },
-                  children: "サン猫の時間漂流",
+                  children: "海之羽翼",
                 },
               },
             ],
@@ -185,12 +185,12 @@ export async function GET({
     height: 630,
     fonts: [
       {
-        name: "Noto Serif SC",
+        name: "Maple",
         data: fontRegular,
         weight: 400,
         style: "normal",
       },
-      { name: "Noto Serif SC", data: fontBold, weight: 700, style: "normal" },
+      { name: "Maple", data: fontBold, weight: 700, style: "normal" },
     ],
   });
 
