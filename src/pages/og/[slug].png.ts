@@ -19,8 +19,8 @@ export async function GET({
   props,
 }: APIContext<{ post: CollectionEntry<"blog"> }>) {
   const { post } = props;
-  const fontRegular = fs.readFileSync("public/fonts/NotoSerifSC-Medium.woff2");
-  const fontBold = fs.readFileSync("public/fonts/NotoSerifSC-Bold.woff2");
+  const fontRegular = fs.readFileSync("public/fonts/NotoSerifSC-Medium.ttf");
+  const fontBold = fs.readFileSync("public/fonts/NotoSerifSC-Bold.ttf");
   const iconBuffer = fs.readFileSync("public/favicon-dark.svg");
   const iconBase64 = `data:image/svg+xml;base64,${iconBuffer.toString("base64")}`;
 
