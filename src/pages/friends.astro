@@ -2,6 +2,7 @@
 // src/pages/friends.astro
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+
 // 友链数据 (保持不变)
 const mainLinks = [
   {
@@ -30,7 +31,7 @@ const secondaryLinks = [
   { id: "fanzhuo", name: "Fanzhuo", url: "https://blog.fanzhuo.xyz/" },
 ];
 
-const EMAIL = "kisaragi.nanami@qq.com";
+const EMAIL = "evesunmaple@outlook.com";
 ---
 
 <Layout title="友人帐" description="我与朋友们的相遇与故事。">
@@ -41,7 +42,7 @@ const EMAIL = "kisaragi.nanami@qq.com";
         <span>友人帐</span>
       </h1>
       <p class="text-base-content/70 mt-2 text-lg">
-        因果交流電燈の、ひとつの青い照明です
+        在网络世界中与我同行的人们。
       </p>
     </header>
     <div
@@ -169,11 +170,11 @@ const EMAIL = "kisaragi.nanami@qq.com";
                       class="inline w-4 h-4 mr-1 text-info"
                     />
                     <a
-                      href="https://nanami7.top"
+                      href="https://saro.pub/me"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="link link-hover font-semibold">七海の心象素描</a
-                    > (https://nanami7.top)
+                      class="link link-hover font-semibold">サン猫の時間漂流</a
+                    > (https://saro.pub/me)
                   </li>
                 </ul>
               </div>
@@ -192,7 +193,7 @@ const EMAIL = "kisaragi.nanami@qq.com";
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="七海の心象素描"
+                    placeholder="サン猫の時間漂流"
                     class="input input-bordered w-full rounded-lg"
                     required
                   />

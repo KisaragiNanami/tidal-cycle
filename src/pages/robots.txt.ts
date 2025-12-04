@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 
+export const prerender = true;
 
 function getRobotsTxt(sitemapURL: URL) {
   return `

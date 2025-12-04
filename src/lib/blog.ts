@@ -16,15 +16,20 @@ let processedPosts: ProcessedBlogEntry[] | null = null;
  * 采用了缓存机制，确保在同一次构建中只执行一次。
  * @param siteUrl - 网站的根 URL，用于生成长链接
  */
-export async function getAllPostsWithShortLinks(siteUrl: URL): Promise<ProcessedBlogEntry[]> {
+export async function getAllPostsWithShortLinks(
+  siteUrl: URL,
+): Promise<ProcessedBlogEntry[]> {
   if (processedPosts) {
     return processedPosts;
   }
 
-  const allPosts = await getCollection("blog", ({ data }) => data.draft !== true);
+  const allPosts = await getCollection(
+    "blog",
+    ({ data }: CollectionEntry<"blog">) => data.draft !== true,
+  );
 
   const postsWithLinks = await Promise.all(
-    allPosts.map(async (post) => {
+    allPosts.map(async (post: CollectionEntry<"blog">) => {
       const longUrl = new URL(`/blog/${post.slug}`, siteUrl).toString();
       const shortLink = await getShortLink({
         longUrl,

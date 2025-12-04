@@ -1,7 +1,7 @@
 ---
-import type { MarkdownHeading } from "astro";
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import TOC from "@components/blog/TOC.astro";
+import type { MarkdownHeading } from "astro";
 
 export interface Props {
   author: string;
@@ -14,17 +14,20 @@ export interface Props {
 const { headings, author, twitterHandle, githubUrl, telegramUrl } = Astro.props;
 
 // 动态统计数据 (无改动)
-const allPosts = await getCollection("blog", ({ data }) => data.draft !== true);
+const allPosts = await getCollection(
+  "blog",
+  ({ data }: CollectionEntry<"blog">) => data.draft !== true,
+);
 const countWords = (text: string) => {
   text = text.replace(/[\u3000-\u303F\uFF00-\uFFEF]/g, "");
-  text = text.replace(/[`*~_#+\-!\[\]{}()>|]/g, "");
+  text = text.replace(/[`*~_#+\-![\]{}()>|]/g, "");
   const cjkChars = text.match(/[\u4e00-\u9fa5]/g)?.length || 0;
   const otherWords =
     text.replace(/[\u4e00-\u9fa5]/g, " ").match(/\b\w+\b/g)?.length || 0;
   return cjkChars + otherWords;
 };
 const totalWords = allPosts.reduce(
-  (acc, post) => acc + countWords(post.body),
+  (acc: number, post: CollectionEntry<"blog">) => acc + countWords(post.body),
   0,
 );
 const formattedTotalWords =
@@ -34,8 +37,8 @@ const stats = {
   words: formattedTotalWords,
 };
 
-const QQ_GROUP_NUMBER = "2959874980";
-const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
+const QQ_GROUP_NUMBER = "978990027";
+const EMAIL_ADDRESS = "evesunmaple@outlook.com";
 ---
 
 <aside class="lg:col-span-1 no-print">
@@ -54,11 +57,11 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
           </div>
           <div>
             <h3 class="font-semibold text-sm">{author}</h3>
-            <p class="font-semibold text-base-content/70 text-xs">大学生</p>
+            <p class="font-semibold text-base-content/70 text-xs">高三学生</p>
           </div>
         </div>
         <p class="text-base-content/70 text-xs mb-3 leading-relaxed">
-          不畏风雨
+          热爱技术，喜欢记录生活中的点点滴滴。
         </p>
         <div class="flex items-center gap-x-1">
           <a
@@ -107,7 +110,7 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
           <span
             id="telegram-channel-link"
             class="text-sm font-mono text-base-content/80 select-all"
-            >t.me/kisaragi_nanami</span
+            >t.me/saroprock</span
           >
           <button
             id="copy-channel-btn"
@@ -169,7 +172,7 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
                 data-qq-number={QQ_GROUP_NUMBER}
               >
                 <i class="ri-qq-line" />
-                复制QQ
+                复制群号
               </button>
               <a
                 href={`mailto:${EMAIL_ADDRESS}`}
@@ -186,7 +189,7 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
   </div>
 </aside>
 
-<script define:vars={{ QQ_GROUP_NUMBER }}>
+<script define:vars={{ QQ_GROUP_NUMBER }} is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const copyChannelBtn = document.getElementById("copy-channel-btn");
     const channelLinkElement = document.getElementById("telegram-channel-link");

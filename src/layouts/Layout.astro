@@ -4,14 +4,14 @@ import "@styles/global.css";
 import "@styles/background.css";
 import "remixicon/fonts/remixicon.css";
 
-import type { MarkdownHeading } from "astro";
+import Footer from "@components/layout/Footer.astro";
 import Header from "@components/layout/Header.astro";
 import Hero from "@components/layout/Hero.astro";
 import Sidebar from "@components/layout/Sidebar.astro";
-import Footer from "@components/layout/Footer.astro";
 import BackToTop from "@components/widgets/BackToTop.astro";
+import type { MarkdownHeading } from "astro";
 
-const SITE_TITLE = "七海の心象素描";
+const SITE_TITLE = "心象素描";
 const SITE_DESCRIPTION = "ああかがやきの四月の底を、はぎしり燃えてゆききする。";
 const SITE_AUTHOR = "如月七海";
 const OG_IMAGE_DEFAULT = "/default-social-image.png";
@@ -79,11 +79,6 @@ const socialImageURL = new URL(image, Astro.site);
     <meta name="twitter:title" content={finalTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageURL} />
-    <style>
-      @font-face{
-        font-family: "Noto Serif SC", "Noto Serif JP", "Fira Code";/* 自定义字体引用名称 */
-      }
-    </style>
   </head>
   <body class="bg-base-100 text-base-content min-h-screen topography">
     <Header siteTitle={SITE_TITLE} />
@@ -148,3 +143,4 @@ const socialImageURL = new URL(image, Astro.site);
     </script>
   </body>
 </html>
+

@@ -17,8 +17,8 @@ async function getRepoStars(): Promise<number | null> {
     return cachedData.stars;
   }
   try {
-    const owner = "KisaragiNanami";
-    const repo = "tidal-cycle";
+    const owner = "EveSunMaple";
+    const repo = "SaroProck";
     const token = import.meta.env.GITHUB_TOKEN;
     const response = await fetch(
       `https://api.github.com/repos/${owner}/${repo}`,
@@ -54,7 +54,7 @@ const navLinks = [
   { href: "/", text: "动态" },
   { href: "/rss.xml", text: "博客" },
   { href: "/random", text: "漂流" },
-  { href: "https://github.com/KisaragiNanami?tab=repositories", text: "仓库" },
+  { href: "https://github.com/EveSunMaple?tab=repositories", text: "仓库" },
 ];
 
 const socialLinks = [
@@ -82,16 +82,16 @@ const socialLinks = [
             >
               <i class="ri-leaf-line text-primary-content"></i>
             </div>
-            <span class="text-xl font-bold">七海の心象素描</span>
+            <span class="text-xl font-bold">サン猫の時間漂流</span>
           </a>
         </div>
         <div class="text-sm text-base-content/70">
-          <p>四月汐空，云舞樱瓣。</p>
-          <p>凡百锱铢非所计，不畏风兮不畏雨。</p>
+          <p>一个孤独的地方，散落着一个人的人生碎片。</p>
+          <p>感谢你的漂流至此，希望这里的文字能为你带来片刻的宁静或思考。</p>
         </div>
         <div class="mt-4">
           <a
-            href="https://github.com/KisaragiNanami/tidal-cycle"
+            href="https://github.com/EveSunMaple/SaroProck"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-outline btn-sm rounded-full group"
@@ -154,7 +154,7 @@ const socialLinks = [
       <div class="sm:col-span-6 md:col-span-3 lg:col-span-3">
         <figure class="w-full max-w-36 aspect-square rounded-xl">
           <img
-            src="/qrcode.webp"
+            src="/qrcode.png"
             alt="二维码"
             class="w-full h-full object-contain"
           />

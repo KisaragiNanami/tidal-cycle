@@ -1,6 +1,5 @@
 import type { APIContext } from "astro";
 import { parse, serialize } from "cookie";
-// src/lib/auth.ts
 import jwt from "jsonwebtoken";
 
 const JWT_SECRET = import.meta.env.JWT_SECRET;
@@ -20,8 +19,7 @@ export function signJwt(payload: object): string {
 export function verifyJwt(token: string): any | null {
   try {
     return jwt.verify(token, JWT_SECRET);
-  }
-  catch (error) {
+  } catch (error) {
     console.error("JWT verification error:", error);
     return null;
   }
@@ -49,7 +47,9 @@ export function clearAuthCookie(response: Response): void {
 }
 
 // 从请求中获取管理员信息
-export function getAdminUser(context: APIContext): { nickname: string; email: string; website: string; avatar: string } | null {
+export function getAdminUser(
+  context: APIContext,
+): { nickname: string; email: string; website: string; avatar: string } | null {
   const cookies = parse(context.request.headers.get("cookie") || "");
   const token = cookies[COOKIE_NAME];
 

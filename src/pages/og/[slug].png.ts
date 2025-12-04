@@ -1,6 +1,6 @@
-import type { APIContext, GetStaticPaths } from "astro";
-import fs from "node:fs";
 import { type CollectionEntry, getCollection } from "astro:content";
+import fs from "node:fs";
+import type { APIContext, GetStaticPaths } from "astro";
 import satori from "satori";
 import sharp from "sharp";
 
@@ -8,23 +8,26 @@ export const prerender = true;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getCollection("blog");
-  return posts.map(post => ({
+  return posts.map((post: CollectionEntry<"blog">) => ({
     params: { slug: post.slug },
     props: { post }, // 将整篇 post 数据传递给 GET 函数
   }));
 };
 
 // 接收 props
-export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> }>) {
+export async function GET({
+  props,
+}: APIContext<{ post: CollectionEntry<"blog"> }>) {
   const { post } = props;
   const fontRegular = fs.readFileSync("public/fonts/NotoSansSC-Regular.ttf");
   const fontBold = fs.readFileSync("public/fonts/NotoSansSC-Bold.ttf");
   const iconBuffer = fs.readFileSync("public/favicon-dark.svg");
   const iconBase64 = `data:image/svg+xml;base64,${iconBuffer.toString("base64")}`;
 
-  const descText = post.data.description?.length > 120
-    ? `${post.data.description.slice(0, 120)}…`
-    : post.data.description || "";
+  const descText =
+    post.data.description?.length > 120
+      ? `${post.data.description.slice(0, 120)}…`
+      : post.data.description || "";
 
   const template = {
     type: "div",
@@ -38,7 +41,7 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
         padding: "60px",
         background: "linear-gradient(135deg, #0f172a, #1e293b)",
         color: "#fff",
-        fontFamily: "\"Noto Serif CJK SC\"",
+        fontFamily: '"Noto Sans SC"',
         position: "relative",
       },
       children: [
@@ -58,7 +61,10 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
               },
               {
                 type: "div",
-                props: { style: { fontSize: "28px", fontWeight: 600 }, children: "七海の心象素描" },
+                props: {
+                  style: { fontSize: "28px", fontWeight: 600 },
+                  children: "サン猫の時間漂流",
+                },
               },
             ],
           },
@@ -72,7 +78,11 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
               {
                 type: "div",
                 props: {
-                  style: { fontSize: "60px", fontWeight: 700, lineHeight: "1.2" },
+                  style: {
+                    fontSize: "60px",
+                    fontWeight: 700,
+                    lineHeight: "1.2",
+                  },
                   children: post.data.title,
                 },
               },
@@ -97,7 +107,7 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
           props: {
             style: { display: "flex", gap: "12px", flexWrap: "wrap" },
             children: [
-              ...(post.data.categories || []).map((cat) => ({
+              ...(post.data.categories || []).map((cat: string) => ({
                 type: "div",
                 props: {
                   style: {
@@ -109,7 +119,7 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
                   children: cat,
                 },
               })),
-              ...(post.data.tags || []).map((tag) => ({
+              ...(post.data.tags || []).map((tag: string) => ({
                 type: "div",
                 props: {
                   style: {
@@ -132,7 +142,10 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
             height: "630",
             style: { position: "absolute", top: 0, left: 0 },
             children: [
-              { type: "rect", props: { width: "100%", height: "100%", fill: "url(#grid)" } },
+              {
+                type: "rect",
+                props: { width: "100%", height: "100%", fill: "url(#grid)" },
+              },
               {
                 type: "defs",
                 props: {
@@ -145,7 +158,15 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
                         height: 40,
                         patternUnits: "userSpaceOnUse",
                         children: [
-                          { type: "path", props: { d: "M 40 0 L 0 0 0 40", fill: "none", stroke: "rgba(255,255,255,0.05)", strokeWidth: 1 } },
+                          {
+                            type: "path",
+                            props: {
+                              d: "M 40 0 L 0 0 0 40",
+                              fill: "none",
+                              stroke: "rgba(255,255,255,0.05)",
+                              strokeWidth: 1,
+                            },
+                          },
                         ],
                       },
                     },
@@ -157,19 +178,20 @@ export async function GET({ props }: APIContext<{ post: CollectionEntry<"blog"> 
         },
       ],
     },
-  };
+  } as any;
 
   const svg = await satori(template, {
     width: 1200,
     height: 630,
     fonts: [
-      { name: "Noto Serif SC", data: fontRegular, weight: 400, style: "normal" },
-      { name: "Noto Serif SC", data: fontBold, weight: 700, style: "normal" },
+      { name: "Noto Sans SC", data: fontRegular, weight: 400, style: "normal" },
+      { name: "Noto Sans SC", data: fontBold, weight: 700, style: "normal" },
     ],
   });
 
+  // eslint-disable-next-line node/prefer-global/buffer
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
-  return new Response(png, {
+  return new Response(new Uint8Array(png), {
     headers: {
       "Content-Type": "image/png",
       "Cache-Control": "public, max-age=31536000, immutable",
