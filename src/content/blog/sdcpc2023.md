@@ -14,7 +14,7 @@ description: '身败名裂了。'
 
 
 
-## luogu9556 \[SDCPC 2023\] Orders
+## luogu9556 [SDCPC 2023] Orders
 
 货物按天排个序，求个和，找日期分界线，判一下够不够即可。
 
@@ -70,26 +70,26 @@ signed main() {
 }
 ```
 
-## luogu9558 \[SDCPC 2023\] Trie
+## luogu9558 [SDCPC 2023] Trie
 
 不会
 
-## luogu9562 \[SDCPC 2023\] Matching
+## luogu9562 [SDCPC 2023] Matching
 
 考虑如果有边 $(i , j),(j , k)$。
 
 $$  
-\\begin{align}  
-i-j=a\_i - a\_j  
-\\\\  
-i-k=a\_i-a\_k  
-\\end{align}  
+\begin{align}  
+i-j=a_i - a_j  
+\\  
+i-k=a_i-a_k  
+\end{align}  
 $$
 
 联立
 
 $$  
-j-k = a\_j - a\_k  
+j-k = a_j - a_k  
 $$
 
 即存在边 $(j,k)$。
@@ -99,14 +99,14 @@ $$
 移相，然后
 
 $$  
-a\_i - i = a\_j - j  
+a_i - i = a_j - j  
 $$
 
 这样就能得到所有连通块了。
 
 如何选边？
 
-按照 $a\_i$ 排个序，从大到小两个两个选即可。
+按照 $a_i$ 排个序，从大到小两个两个选即可。
 
 ```
 #include<bits/stdc++.h>
@@ -162,15 +162,15 @@ signed main() {
 }
 ```
 
-## luogu9567 \[SDCPC 2023\] Puzzle: Sashigane
+## luogu9567 [SDCPC 2023] Puzzle: Sashigane
 
 没做。
 
-## luogu9568 \[SDCPC 2023\] Computational Geometry
+## luogu9568 [SDCPC 2023] Computational Geometry
 
 不会计算几何。
 
-## luogu9557 \[SDCPC 2023\] Building Company
+## luogu9557 [SDCPC 2023] Building Company
 
 做不出来。
 
@@ -178,7 +178,7 @@ signed main() {
 
 马上写掉。
 
-## luogu9560 \[SDCPC 2023\] Math Problem
+## luogu9560 [SDCPC 2023] Math Problem
 
 太失败了。
 
@@ -188,11 +188,11 @@ signed main() {
 
 枚举操作二的次数，然后
 
-$\\textbf{Lemma}$
+$\textbf{Lemma}$
 
-> 设 $f(n)=kn+k-1$，则通过 $t$ 次操作一，能够得到 $\[k^{t-1}n,f^{t}(n)\]$。
+> 设 $f(n)=kn+k-1$，则通过 $t$ 次操作一，能够得到 $[k^{t-1}n,f^{t}(n)]$。
 
-$\\textbf{Proof}$
+$\textbf{Proof}$
 
 > 数学归纳法。
 > 
@@ -200,13 +200,13 @@ $\\textbf{Proof}$
 > 
 > 假设 $t=p$ 时成立，下证当 $t=p+1$ 时也成立。
 > 
-> 此时我们已经得到了区间 $\[k^{t-1}n,f^t(n)\]$ 的所有数。
+> 此时我们已经得到了区间 $[k^{t-1}n,f^t(n)]$ 的所有数。
 > 
-> 对于区间 $x \\in \[k^{t-1}n,f^t(n)\]$，它可以得到 $\[kx,kx+k-1\]$，然后 $x+1$ 有 $\[k(x+1),k(x+1)+k-1\]$，可以发现这是连续的。首位一接正好填满。
+> 对于区间 $x \in [k^{t-1}n,f^t(n)]$，它可以得到 $[kx,kx+k-1]$，然后 $x+1$ 有 $[k(x+1),k(x+1)+k-1]$，可以发现这是连续的。首位一接正好填满。
 > 
-> 所以得到了区间 $\[k^{t}n,f^{t+1}(n)\]$。
+> 所以得到了区间 $[k^{t}n,f^{t+1}(n)]$。
 > 
-> 故命题对 $t \\in N^{+}$ 都成立。
+> 故命题对 $t \in N^{+}$ 都成立。
 > 
 > 证毕。
 
@@ -274,11 +274,11 @@ signed main() {
 }
 ```
 
-## luogu9561 \[SDCPC 2023\] Colorful Segments
+## luogu9561 [SDCPC 2023] Colorful Segments
 
-\[link\]([luogu9561 \[SDCPC 2023\] Colorful Segments 题解 – KisaragiNanami](https://kisanami.top/2025/luogu9561/)
+[link](https://nanami7.top/blog/luogu9561/)
 
-## luogu9564 \[SDCPC 2023\] Three Dice
+## luogu9564 [SDCPC 2023] Three Dice
 
 模拟。
 
@@ -357,17 +357,17 @@ signed main() {
 }
 ```
 
-## luogu9559 \[SDCPC 2023\] Fast and Fat
+## luogu9559 [SDCPC 2023] Fast and Fat
 
 二分答案 $mid$。
 
 展开
 
 $$  
-v\_i + w\_i - w\_j  
+v_i + w_i - w_j  
 $$
 
-考虑超过 $v\_i \\ge mid$ 的 $i$，用大的 $v\_i+w\_i$ 贪心匹配较大的 $w\_j$。
+考虑超过 $v_i \ge mid$ 的 $i$，用大的 $v_i+w_i$ 贪心匹配较大的 $w_j$。
 
 维护两个堆即可。
 
@@ -429,15 +429,15 @@ signed main() {
 }
 ```
 
-## luogu9563 \[SDCPC 2023\] Be Careful 2
+## luogu9563 [SDCPC 2023] Be Careful 2
 
 不会
 
-## luogu9566 \[SDCPC 2023\] Difficult Constructive Problem
+## luogu9566 [SDCPC 2023] Difficult Constructive Problem
 
 不会，可能会补一下。
 
-## luogu9565 \[SDCPC 2023\] Not Another Path Query Problem
+## luogu9565 [SDCPC 2023] Not Another Path Query Problem
 
 一条路径合法，当且仅当路径权值与大于等于 $V$。
 
