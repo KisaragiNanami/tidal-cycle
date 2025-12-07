@@ -223,7 +223,7 @@ signed main() {
 
 ## luogu1477 [NOI2008] 假面舞会
 
-[link](https://yozora0908.github.io/2023/lg1477-solution)
+[link](https://nanami7.top/blog/luogu1477)
 
 ## CF980D Perfect Groups
 

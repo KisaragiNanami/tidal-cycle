@@ -74,7 +74,7 @@ signed main() {
 
 ### luogu4155 [SCOI2015]国旗计划
 
-[link](https://yozora0908.github.io/2022/lg4155-solution)
+[link](https://nanami7.top/blog/luogu4155)
 
 ### luogu3509 [POI2010]ZAB-Frog
 

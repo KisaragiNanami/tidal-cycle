@@ -891,7 +891,7 @@ signed main() {
 
 ### CF1707C DFS Trees
 
-[link](https://yozora0908.github.io/2023/cf1707c-solution)
+[link](https://nanami7.top/blog/cf1707c)
 
 ### Kruskal重构树
 

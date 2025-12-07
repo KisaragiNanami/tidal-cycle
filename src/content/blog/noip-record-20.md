@@ -149,7 +149,7 @@ signed main() {
 
 ### luogu1600 [NOIP2016 提高组] 天天爱跑步
 
-[link](https://yozora0908.github.io/2021/lg1600-solution)
+[link](https://nanami7.top/blog/luogu1600)
 
 >把路径的贡献拆成前缀的贡献，维护子树和。
 
@@ -717,4 +717,4 @@ $pre_x(y)$ 也可以从 $x$ 往上倍增出来。
 
 ### LOJ #2955. 「NOIP2018」保卫王国
 
-[link](https://yozora0908.github.io/2023/loj2955-solution)
+[link](https://nanami7.top/blog/loj2955)

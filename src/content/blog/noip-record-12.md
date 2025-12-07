@@ -225,7 +225,7 @@ $x_1$ 等价于 $y_2$，$x_2$ 等价于 $y_1$。如果 $x_1$ 与 $y_1$ 或者 $x
 
 ### luogu3940 分组
 
-[link](https://yozora0908.github.io/2023/lg3940-solution)
+[link](https://nanami7.top/blog/luogu3940)
 
 ### luogu2024 [NOI2001] 食物链
 

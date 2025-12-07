@@ -683,7 +683,7 @@ $$
 
 CRT 完全可以被 exCRT 代替。
 
-[link](https://yozora0908.github.io/2022/notes-number-theory-1)
+[link](https://nanami7.top/blog/notes-excrt)
 
 ## 线性筛求常见积性函数
 

@@ -589,8 +589,8 @@ signed main() {
 
 ### CF Gym102331B Bitwise Xor
 
-[link](https://yozora0908.top/2023/cfgym102331b-solution)
+[link](https://nanami7.top/blog/cfgym102331b)
 
 ### luogu7717 「EZEC-10」序列
 
-[link](https://yozora0908.top/2023/lg7717-solution)
+[link](https://nanami7.top/blog/luogu7717)

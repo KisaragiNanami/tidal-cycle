@@ -443,8 +443,8 @@ signed main() {
 
 ### luogu3724 [AHOI2017/HNOI2017] 大佬
 
-[link](https://yozora0908.github.io/2023/lg3724-solution)
+[link](https://nanami7.top/blog/luogu3724)
 
 ### luogu6563 [SBCOI2020] 一直在你身旁
 
-[link](https://yozora0908.github.io/2023/lg6563-solution)
+[link](https://nanami7.top/blog/luogu6563)

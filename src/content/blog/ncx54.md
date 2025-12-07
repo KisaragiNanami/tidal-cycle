@@ -289,4 +289,4 @@ signed main() {
 
 ## F. Traveling
 
-单独写了[题解](https://yozora0908.github.io//ncx54f-solution)。
+单独写了[题解](https://nanami7.top/blog/ncx54)。

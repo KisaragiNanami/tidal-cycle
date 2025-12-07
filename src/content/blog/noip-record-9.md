@@ -439,7 +439,7 @@ signed main() {
 
 枚举没有使用的硬币集合 $S$，如果 $f(U \setminus S)=n$，那么就从 $\operatorname{lowbit}$ 处更新 $g(S)$，同时更新答案。
 
-```CPP
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -646,7 +646,7 @@ signed main() {
 
 ### luogu7098 [yLOI2020] 凉凉
 
-[link](https://www.luogu.com.cn/blog/yozora0908/solution-p7098)
+[link](https://www.luogu.com.cn/article/vx46q8n9)
 
 ### luogu4923 [MtOI2018] gcd？人生赢家！
 
@@ -987,4 +987,4 @@ signed main() {
 
 Starry Sky.
 
-[link](https://yozora0908.github.io/2023/lg3943-solution)
+[link](https://nanami7.top/blog/luogu3943)

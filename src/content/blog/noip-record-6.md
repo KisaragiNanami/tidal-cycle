@@ -953,7 +953,7 @@ signed main() {
 
 ## luogu7717 「EZEC-10」序列
 
-[link](https://yozora0908.top/2023/lg7717-solution)
+[link](https://nanami7.top/blog/luogu7717)
 
 ## luogu4063 [JXOI2017]数列
 

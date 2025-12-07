@@ -817,7 +817,7 @@ signed main() {
 
 ### LOJ#2999. 「JOISC 2015 Day2」Keys
 
-[link](https://yozora0908.github.io/2023/loj2999-solution)
+[link](https://nanami7.top/blog/loj2999)
 
 ### CF483D Interesting Array
 
