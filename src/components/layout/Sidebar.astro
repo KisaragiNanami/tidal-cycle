@@ -9,9 +9,17 @@ export interface Props {
   githubUrl: string;
   telegramUrl: string;
   headings?: MarkdownHeading[];
+  idPrefix?: string;
 }
 
-const { headings, author, twitterHandle, githubUrl, telegramUrl } = Astro.props;
+const {
+  headings,
+  author,
+  twitterHandle,
+  githubUrl,
+  telegramUrl,
+  idPrefix: _idPrefix = "sidebar",
+} = Astro.props;
 
 // 动态统计数据 (无改动)
 const allPosts = await getCollection(
@@ -37,7 +45,7 @@ const stats = {
   words: formattedTotalWords,
 };
 
-const QQ_GROUP_NUMBER = "325823989";
+const QQ_GROUP_NUMBER = "1072614878";
 const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
 ---
 
@@ -91,9 +99,6 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
           >
             <i class="ri-telegram-line text-lg"></i>
           </a>
-          <a href="/rss.xml" class="btn btn-outline btn-sm ml-auto rounded-lg">
-            浏览博客
-          </a>
         </div>
       </div>
 
@@ -103,25 +108,18 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
         <h4 class="text-xs font-semibold uppercase text-base-content/70 mb-2">
           我的频道
         </h4>
-        <div
-          class="relative flex items-center bg-base-100 rounded-lg p-2 border border-base-content/10"
+        <a
+          href="https://t.me/saroprock"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between bg-base-100 rounded-lg p-3 border border-base-content/10 transition hover:border-primary/60 hover:bg-base-100/80"
         >
-          <i class="ri-telegram-fill text-base-content/70 ml-1 mr-2"></i>
-          <span
-            id="telegram-channel-link"
-            class="text-sm font-mono text-base-content/80 select-all"
-            >t.me/kisanami_blog</span
-          >
-          <button
-            id="copy-channel-btn"
-            type="button"
-            class="btn btn-ghost btn-sm btn-circle absolute right-1"
-            aria-label="复制频道地址"
-          >
-            <i class="ri-file-copy-fill copy-icon"></i>
-            <i class="ri-check-line success-icon hidden"></i>
-          </button>
-        </div>
+          <span class="flex items-center gap-2 text-sm">
+            <i class="ri-telegram-fill text-base-content/70"></i>
+            <span class="font-mono text-base-content/80">t.me/saroprock</span>
+          </span>
+          <i class="ri-external-link-line text-base-content/60" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
 
@@ -166,17 +164,17 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
               联系方式
             </h3>
             <div class="space-y-2">
-              <button
-                id="copy-qq-btn"
-                class="btn btn-sm btn-outline w-full rounded-lg"
-                data-qq-number={QQ_GROUP_NUMBER}
-              >
-                <i class="ri-qq-line" />
-                复制群号
-              </button>
+              <div class="flex items-center justify-between bg-base-100 rounded-lg p-3 border border-base-content/10">
+                <span class="flex items-center gap-2 text-sm">
+                  <i class="ri-qq-line" /> QQ 群
+                </span>
+                <span class="font-mono text-sm text-base-content/80">
+                  {QQ_GROUP_NUMBER}
+                </span>
+              </div>
               <a
                 href={`mailto:${EMAIL_ADDRESS}`}
-                class="btn btn-sm btn-outline w-full rounded-lg"
+                class="btn w-full bg-base-100 rounded-lg p-3 border border-base-content/10"
               >
                 <i class="ri-mail-send-line" />
                 发送邮件
@@ -188,60 +186,3 @@ const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
     }
   </div>
 </aside>
-
-<script define:vars={{ QQ_GROUP_NUMBER }} is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const copyChannelBtn = document.getElementById("copy-channel-btn");
-    const channelLinkElement = document.getElementById("telegram-channel-link");
-
-    if (copyChannelBtn && channelLinkElement) {
-      const copyIcon = copyChannelBtn.querySelector(".copy-icon");
-      const successIcon = copyChannelBtn.querySelector(".success-icon");
-
-      copyChannelBtn.addEventListener("click", async () => {
-        const textToCopy = channelLinkElement.textContent;
-        if (!textToCopy || !copyIcon || !successIcon) return;
-        try {
-          await navigator.clipboard.writeText(textToCopy);
-          copyIcon.classList.add("hidden");
-          successIcon.classList.remove("hidden");
-          setTimeout(() => {
-            successIcon.classList.add("hidden");
-            copyIcon.classList.remove("hidden");
-          }, 2000);
-        } catch (err) {
-          console.error("无法复制频道地址:", err);
-        }
-      });
-    }
-
-    const copyQqBtn = document.getElementById("copy-qq-btn");
-    if (copyQqBtn) {
-      const originalText = copyQqBtn.innerHTML;
-
-      copyQqBtn.addEventListener("click", () => {
-        if (!QQ_GROUP_NUMBER) return;
-
-        navigator.clipboard
-          .writeText(QQ_GROUP_NUMBER)
-          .then(() => {
-            copyQqBtn.innerHTML = '<i class="ri-check-line"></i> 复制成功';
-            copyQqBtn.classList.add("btn-success");
-            setTimeout(() => {
-              copyQqBtn.innerHTML = originalText;
-              copyQqBtn.classList.remove("btn-success");
-            }, 2000);
-          })
-          .catch((err) => {
-            console.error("无法复制QQ群号: ", err);
-            copyQqBtn.innerHTML = '<i class="ri-close-line"></i> 复制失败';
-            copyQqBtn.classList.add("btn-error", "text-error-content");
-            setTimeout(() => {
-              copyQqBtn.innerHTML = originalText;
-              copyQqBtn.classList.remove("btn-error", "text-error-content");
-            }, 2000);
-          });
-      });
-    }
-  });
-</script>

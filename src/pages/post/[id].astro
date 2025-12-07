@@ -42,7 +42,7 @@ if (!post) return Astro.redirect("/404");
             </div>
           </div>
           <div>
-            <h3 class="font-semibold text-base-content">海之羽翼</h3>
+            <h3 class="font-semibold text-base-content">サン猫の時間漂流</h3>
             <p class="text-xs text-base-content/60">{post.formattedDate}</p>
           </div>
         </header>
@@ -79,7 +79,7 @@ if (!post) return Astro.redirect("/404");
             </span>
           )}
         </p>
-        <p class="opacity-70 truncate text-base-content/80" set:html={post.reply.html} />
+        <p class="opacity-70 text-base-content/80 break-all" set:html={post.reply.html} />
       </div>
     </blockquote>
   </a>

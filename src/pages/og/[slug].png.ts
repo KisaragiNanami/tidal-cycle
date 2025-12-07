@@ -41,7 +41,7 @@ export async function GET({
         padding: "60px",
         background: "linear-gradient(135deg, #0f172a, #1e293b)",
         color: "#fff",
-        fontFamily: '"Maple"',
+        fontFamily: '"Noto Sans SC"',
         position: "relative",
       },
       children: [
@@ -63,7 +63,7 @@ export async function GET({
                 type: "div",
                 props: {
                   style: { fontSize: "28px", fontWeight: 600 },
-                  children: "海之羽翼",
+                  children: "サン猫の時間漂流",
                 },
               },
             ],
@@ -184,17 +184,11 @@ export async function GET({
     width: 1200,
     height: 630,
     fonts: [
-      {
-        name: "Maple",
-        data: fontRegular,
-        weight: 400,
-        style: "normal",
-      },
-      { name: "Maple", data: fontBold, weight: 700, style: "normal" },
+      { name: "Noto Sans SC", data: fontRegular, weight: 400, style: "normal" },
+      { name: "Noto Sans SC", data: fontBold, weight: 700, style: "normal" },
     ],
   });
 
-  // eslint-disable-next-line node/prefer-global/buffer
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
   return new Response(new Uint8Array(png), {
     headers: {

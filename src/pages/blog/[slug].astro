@@ -27,7 +27,7 @@ const { post } = Astro.props;
 const { Content, headings } = await post.render();
 const { title, description, pubDate, updated, image } = post.data;
 
-const author = "如月七海";
+const author = "EveSunMaple";
 // --- 预计阅读时间计算 ---
 // 中文阅读速度（字/分钟）
 const chineseWPM = 300;
@@ -84,19 +84,6 @@ const customComponents = {
       }
 
       <div class="space-y-6 no-print">
-        <div class="flex items-center gap-2 text-sm text-base-content/60">
-          <a href="/" class="hover:text-primary transition-colors duration-200"
-            >首页</a
-          >
-          <i class="ri-arrow-right-s-line text-base-content/40"></i>
-          <a
-            href="/rss.xml"
-            class="hover:text-primary transition-colors duration-200">博客</a
-          >
-          <i class="ri-arrow-right-s-line text-base-content/40"></i>
-          <span class="text-base-content/80 font-medium">正文</span>
-        </div>
-
         <h1
           class="text-3xl md:text-4xl lg:text-5xl font-bold text-base-content leading-tight"
         >
@@ -121,7 +108,7 @@ const customComponents = {
             </div>
             <div class="flex flex-col">
               <span class="font-semibold text-base-content">{author}</span>
-              <span class="text-sm text-base-content/60">局外人</span>
+              <span class="text-sm text-base-content/60">高三学生</span>
             </div>
           </div>
 
