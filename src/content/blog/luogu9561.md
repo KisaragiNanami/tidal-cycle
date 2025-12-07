@@ -33,7 +33,7 @@ description: 'Solution'
 于是写出状态转移方程
 
 $$  
-2^{cnt} \times \sum_{k=1}^{l_i-1} f_{k,c\_i \oplus 1} \rightarrow f_{r_i,c_i}  
+2^{cnt} \times \sum_{k=1}^{l_i-1} f_{k,c_i \oplus 1} \rightarrow f_{r_i,c_i}  
 $$
 
 其中 $cnt$ 为 $[k,r_i]$ 包含的 $i$ 同色区间数量。
@@ -95,7 +95,7 @@ void solve() {
 
 ## $\texttt{Code}$
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long

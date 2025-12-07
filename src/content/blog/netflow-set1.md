@@ -302,7 +302,7 @@ DAG 最小路径覆盖板子题，具体做法不再赘述，看代码就能懂�
 
 ### CODE
 
-``` cpp
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=1000, M=6666, inf=0x3f3f3f3f;

@@ -18,7 +18,7 @@ description: '身败名裂了。'
 
 货物按天排个序，求个和，找日期分界线，判一下够不够即可。
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -108,7 +108,7 @@ $$
 
 按照 $a_i$ 排个序，从大到小两个两个选即可。
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -214,7 +214,7 @@ $\textbf{Proof}$
 
 但自己做的时候真的没想到。
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -282,7 +282,7 @@ signed main() {
 
 模拟。
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -371,7 +371,7 @@ $$
 
 维护两个堆即可。
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -453,7 +453,7 @@ signed main() {
 
 用并查集维护合法边的连通块即可回答询问。
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long

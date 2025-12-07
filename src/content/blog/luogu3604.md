@@ -39,7 +39,7 @@ $$
 
 ## $\text{Code}$
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define SET(a,b) memset(a,b,sizeof(a))
