@@ -1,12 +1,11 @@
 ---
 
 title: 想起某些东西
-tags: 鲜花
+tags:
+  - 鲜花
 categories:
   - 随笔
-
 description: '咕噜咕噜'
-
 pubDate: 2022-08-11 21:19:14
 
 ---

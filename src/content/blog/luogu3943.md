@@ -1,7 +1,6 @@
 ---
 title: luogu3943 星空 题解
-pubDate: 2023-07-15 14:51:43
-urls: lg3943-solution
+pubDate: 2023-07-15
 tags:
   - 差分
   - 状态压缩
@@ -9,8 +8,7 @@ tags:
   - DP
 categories:
   - 题解
-math: true
-comment: true
+description: 'Solution'
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: luogu7715 Shape 题解
-tags: DP
+tags:
+  - DP
 categories:
   - 题解
 pubDate: 2022-11-12

@@ -10,6 +10,7 @@ tags:
 categories:
   - 题解
 pubDate: 2022-07-11
+description: 'Solution'
 ---
 
 网络流 24 题，很多都是与二分图相关，「能用网络流算法求解」的题目，所以下文叙述时会更多地讨论题目的本质。

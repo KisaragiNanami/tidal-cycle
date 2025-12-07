@@ -1,18 +1,13 @@
-
-
 ---
-
 title: luogu6381 Odyssey 题解
 tags:
-
-- DP
-- 拓扑排序
-- 数论
-  categories:
+  - DP
+  - 拓扑排序
+  - 数论
+categories:
   - 题解
-  pubDate: 2022-10-21
-  description: 'Solution'
-
+pubDate: 2022-10-21
+description: 'Solution'
 ---
 
 对于 $ab = c^k$，不难想到把 $a$ 和 $b$ 都分解。

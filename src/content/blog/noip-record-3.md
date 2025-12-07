@@ -1,7 +1,6 @@
 ---
 title: 「NOIP Record」#3 Trie
 pubDate: 2023-05-07
-urls: noip-record-3
 tags:
   - Trie
   - 字符串

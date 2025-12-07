@@ -1,6 +1,7 @@
 ---
 title: 回归
-tags: 鲜花
+tags:
+  - 鲜花
 categories:
   - 随笔
 description: '还是滚回来了'

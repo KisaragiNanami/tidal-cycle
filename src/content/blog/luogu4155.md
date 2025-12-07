@@ -1,6 +1,7 @@
 ---
 title: luogu4155 国旗计划 题解
-tags: 倍增
+tags:
+  - 倍增
 categories:
   - 题解
 pubDate: 2022-05-07

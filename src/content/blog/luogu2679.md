@@ -1,6 +1,7 @@
 ---
 title: luogu2679 子串 题解
-tags: DP
+tags:
+  - DP
 categories:
   - 题解
 description: 'Solution'

@@ -7,7 +7,7 @@ tags:
   - 组合数学
 categories:
   - 题解
-f(i) = \min_{j=1}^{step} \{ f(i-j) \}
+description: 'Solution'
 ---
 
 ## Solution

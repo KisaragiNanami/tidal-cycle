@@ -1,7 +1,6 @@
 ---
 title: luogu2757 [国家集训队] 等差子序列 题解
 pubDate: 2023-10-23
-urls: lg2757-solution
 tags:
   - 多项式哈希
   - 线段树

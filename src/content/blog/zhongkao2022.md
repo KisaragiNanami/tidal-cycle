@@ -6,6 +6,7 @@ tags:
 categories:
   - 游记
 pubDate: 2022-06-11
+description: '再见初中'
 ---
 
 ## DAY -1

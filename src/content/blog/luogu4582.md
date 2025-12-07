@@ -7,8 +7,7 @@ tags:
   - 树的重心
 categories:
   - 题解
-math: true
-comment: true
+description: 'Solution'
 ---
 
 ## Solution

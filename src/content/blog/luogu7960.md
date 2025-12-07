@@ -1,6 +1,7 @@
 ---
 title: luogu7960 报数 题解
-tags: 数论
+tags:
+  - 数论
 categories:
   - 题解
 description: 'Solution'

@@ -1,6 +1,7 @@
 ---
 title: luogu5664 Emiya 家今天的饭 题解
-tags: DP
+tags:
+  - DP
 categories:
   - 题解
 pubDate: 2022-04-10

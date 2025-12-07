@@ -1,6 +1,7 @@
 ---
 title: 「琐记」#10 最后的作战
-tags: 鲜花
+tags:
+  - 鲜花
 categories:
   - 随笔
 description: '大梦'

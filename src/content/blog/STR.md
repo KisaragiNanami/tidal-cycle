@@ -1,6 +1,7 @@
 ---
 title: Summertime Record
-tags: 鲜花
+tags:
+  - 鲜花
 categories:
   - 随笔
 pubDate: 2022-06-29

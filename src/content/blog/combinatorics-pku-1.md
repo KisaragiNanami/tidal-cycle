@@ -1,7 +1,8 @@
 ---
 title: 北大版《组合数学》#1
 pubDate: 2024-01-20
-tags: 组合数学
+tags:
+  - 组合数学
 categories:
   - 学习笔记
 description: '第一章 笔记与习题'

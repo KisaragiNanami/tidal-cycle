@@ -1,7 +1,8 @@
 ---
 title: luogu9166 「联合省选 2023」 火车站 题解 
 pubDate: 2023-10-23
-tags: 差分
+tags:
+  - 差分
 categories:
   - 题解
 description: 'Solution'

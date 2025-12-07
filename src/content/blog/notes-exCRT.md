@@ -7,6 +7,7 @@ tags:
 categories:
   - 学习笔记
 pubDate: 2022-07-29
+description: '强大然而不常用'
 ---
 
 ## 中国剩余定理（CRT）

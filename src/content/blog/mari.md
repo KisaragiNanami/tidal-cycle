@@ -1,7 +1,8 @@
 ---
 title: マリーの架空世界
 pubDate: 2024-01-01
-tags: 轻小说
+tags:
+  - 轻小说
 categories:
   - 文摘
 description: '咕噜咕噜'

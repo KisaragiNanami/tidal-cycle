@@ -6,7 +6,7 @@ tags:
   - 图论
 categories:
   - 题解
-
+description: 'Solution'
 ---
 
 设 $f_x$ 为以 $x$ 结尾的最长路径，$g_x$ 为以 $x$ 开头的最长路径，那么答案就是 $\max_{(x,y) \in E} \{f_x+1+g_y\}$。

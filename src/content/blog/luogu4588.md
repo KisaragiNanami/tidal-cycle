@@ -1,6 +1,7 @@
 ---
 title: luogu4588 数学计算 题解
-tags: 线段树
+tags:
+  - 线段树
 categories:
   - 题解
 description: 'Solution'

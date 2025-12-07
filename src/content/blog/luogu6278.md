@@ -1,6 +1,6 @@
 ---
 title: luogu6278 Haircut 题解
-\sum_{ i=1 \text{ and } f_i > k}^n f_i - k \cdot \sum_{i \in [1,n]} [f_i > k]
+description: 'Solution'
 tags:
   - 树状数组
 categories:

@@ -1,6 +1,7 @@
 ---
 title: luogu3304 直径 题解
-tags: 树的直径
+tags:
+  - 树的直径
 categories:
   - 题解
 description: 'Solution'

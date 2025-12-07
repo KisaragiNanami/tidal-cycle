@@ -1,7 +1,6 @@
 ---
 title: divide 题解
 pubDate: 2023-11-16
-urls: divide-solution
 tags:
   - DP
   - 计数

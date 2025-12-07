@@ -1,11 +1,11 @@
 ---
 title: 「博弈论学习笔记」#1 组合游戏基础
-tags: 博弈论
+tags:
+  - 博弈论
 categories:
   - 学习笔记
-math: true
-comment: true
-pubDate: 2023-01-28 22:15:29
+description: '薄一波一'
+pubDate: 2023-01-28
 ---
 
 OI 中的博弈论主要研究公平组合游戏（ICG）。

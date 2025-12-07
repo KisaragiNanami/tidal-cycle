@@ -1,6 +1,5 @@
 ---
 title: luogu2294 狡猾的商人 题解
-urls: lg2294-solution
 tags:
   - 并查集
   - 差分约束系统

@@ -1,6 +1,5 @@
 ---
 title: 「NOIP Record」#2 基环树
-urls: noip-record-2
 tags:
   - 基环树
   - DP
@@ -8,7 +7,7 @@ tags:
   - 博弈论
   - 计数
 categories: Record
-pubDate: 2023-05-07 20:46:15
+pubDate: 2023-05-07
 description: '少年的后脚超越了前脚'
 ---
 

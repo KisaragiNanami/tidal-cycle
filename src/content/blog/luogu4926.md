@@ -1,6 +1,7 @@
 ---
 title: luogu4926 倍杀测量者 题解
-tags: 差分约束系统
+tags:
+  - 差分约束系统
 categories:
   - 题解
 pubDate: 2022-05-29

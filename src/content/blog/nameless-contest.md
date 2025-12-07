@@ -8,7 +8,8 @@ tags:
   - DP
   - 容斥原理
   - 子集反演
-categories: 比赛
+categories:
+  - 比赛
 Solution: '神秘模拟赛'
 ---
 

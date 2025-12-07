@@ -1,6 +1,7 @@
 ---
 title: 「琐记」#4
-tags: 鲜花
+tags:
+  - 鲜花
 categories:
   - 随笔
 description: '大梦'

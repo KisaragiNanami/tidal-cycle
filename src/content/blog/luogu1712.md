@@ -1,11 +1,11 @@
 ---
 title: luogu1712 区间 题解
-urls: lg1712-solution
-tags: 线段树
+tags:
+  - 线段树
 categories:
   - 题解
-pubDate: 2022-05-28 17:11:52
-
+pubDate: 2022-05-28
+description: 'Solution'
 ---
 
 ## 分析
