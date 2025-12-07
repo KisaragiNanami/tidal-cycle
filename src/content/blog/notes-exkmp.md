@@ -3,7 +3,8 @@ title: 「字符串学习笔记」#2 Z函数（扩展KMP）
 tags:
   - 字符串
   - 扩展KMP算法
-categories: 学习笔记
+categories:
+  - 学习笔记
 pubDate: 2022-08-20
 description: 'Z函数的基本内容'
 ---

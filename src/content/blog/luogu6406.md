@@ -4,7 +4,8 @@ pubDate: 2023-11-11
 tags:
   - 分治
   - 决策单调性
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

@@ -3,7 +3,8 @@ title: luogu2491 消防 题解
 tags:
   - 树的直径
   - 单调队列
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2021-10-01
 ---

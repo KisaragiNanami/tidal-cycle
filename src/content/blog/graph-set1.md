@@ -5,7 +5,8 @@ tags:
   - 最短路
   - 最近公共祖先
   - 拓扑排序
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-07-25
 description: '做题记录'
 ---

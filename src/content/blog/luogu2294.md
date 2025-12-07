@@ -4,7 +4,8 @@ urls: lg2294-solution
 tags:
   - 并查集
   - 差分约束系统
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-06-30
 description: 'Solution'
 ---

@@ -3,7 +3,8 @@ title: luogu2403 所驼门王的宝藏 题解
 tags:
   - 图论
   - 强连通分量
-categories: 题解
+categories:
+  - 题解
 
 pubDate: 2022-02-09
 ---

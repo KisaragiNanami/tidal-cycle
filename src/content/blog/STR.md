@@ -1,7 +1,8 @@
 ---
 title: Summertime Record
 tags: 鲜花
-categories: 随笔
+categories:
+  - 随笔
 pubDate: 2022-06-29
 description: '好好学习'
 ---

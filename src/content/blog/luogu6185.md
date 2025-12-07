@@ -3,7 +3,8 @@ title: luogu6185 序列 题解
 tags:
   - 二分图
   - 并查集
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-05-01
 description: 'Solution'
 ---

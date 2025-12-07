@@ -3,7 +3,8 @@ title: luogu4678 全排列 题解
 tags:
   - DP
   - 组合数学
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-07-25
 description: 'Solution'
 ---

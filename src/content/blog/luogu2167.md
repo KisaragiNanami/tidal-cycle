@@ -7,7 +7,8 @@ tags:
   - 搜索
   - 计数
   - 二项式反演
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

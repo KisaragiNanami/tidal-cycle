@@ -4,7 +4,8 @@ tags:
   - 数论
   - 中国剩余定理
   - 扩展中国剩余定理
-categories: 学习笔记
+categories:
+  - 学习笔记
 pubDate: 2022-07-29
 ---
 

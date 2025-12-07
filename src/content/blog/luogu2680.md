@@ -4,7 +4,8 @@ tags:
   - 二分答案
   - 树上差分
   - 树论
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2021-10-04
 ---

@@ -1,7 +1,8 @@
 ---
 title: luogu5588 小猪佩奇爬树 题解
 tags: 树论
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-04-30
 description: 'Solution'
 ---

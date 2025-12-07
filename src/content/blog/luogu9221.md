@@ -5,7 +5,8 @@ tags:
   - DP
   - 计数
   - 区间合并
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

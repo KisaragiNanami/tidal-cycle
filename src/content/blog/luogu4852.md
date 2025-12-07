@@ -3,7 +3,8 @@ title: luogu4852 yyf hates choukapai 题解
 tags:
   - DP
   - 单调队列
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-07-03
 description: 'Solution'
 ---

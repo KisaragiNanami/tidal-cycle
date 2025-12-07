@@ -3,7 +3,8 @@ title: 矩阵乘法简单题 1
 tags:
   - DP
   - 矩阵
-categories: 题解
+categories:
+  - 题解
 description: '矩阵专题做题记录'
 pubDate: 2022-08-11
 ---

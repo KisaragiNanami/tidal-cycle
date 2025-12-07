@@ -1,7 +1,8 @@
 ---
 title: luogu6186 冒泡排序 题解
 tags: 树状数组
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-05-01
 description: 'Solution'
 ---

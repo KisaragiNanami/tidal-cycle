@@ -4,7 +4,8 @@ tags:
   - DP
   - 状态压缩
   - 最短路
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-02-09
 ---

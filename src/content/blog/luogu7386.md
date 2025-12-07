@@ -4,7 +4,8 @@ tags:
   - 组合数学
   - 计数
   - 生成函数
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2023-06-20
 ---

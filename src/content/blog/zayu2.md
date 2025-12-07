@@ -1,15 +1,14 @@
 ---
 title: 「杂题选讲」#2
-urls: tititi-solution-2
 tags:
   - 贪心
   - DP
   - 概率论
   - 组合数学
   - 杂题选讲
-categories: 题解
-math: true
-pubDate: 2022-08-04 21:52:12
+categories:
+  - 题解
+pubDate: 2022-08-04
 ---
 
 菜死了啊。

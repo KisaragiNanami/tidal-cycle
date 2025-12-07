@@ -6,7 +6,8 @@ tags:
   - 概率论
   - 线段树
   - 树状数组
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-08-17
 description: '做题记录'
 ---

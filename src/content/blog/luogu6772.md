@@ -6,7 +6,8 @@ tags:
   - 图论
   - 矩阵
   - 倍增
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

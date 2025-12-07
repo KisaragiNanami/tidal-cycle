@@ -4,7 +4,8 @@ tags:
   - DP
   - 矩阵
   - 倍增
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-08-12
 ---

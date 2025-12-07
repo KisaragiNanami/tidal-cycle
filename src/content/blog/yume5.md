@@ -1,10 +1,10 @@
 ---
 title: 「琐记」#5
-urls: yume-5
-tags: 琐记
-categories: 简记
-math: true
-pubDate: 2022-03-26 12:42:49
+tags: 鲜花
+categories:
+  - 随笔
+description: '大梦'
+pubDate: 2022-03-26
 ---
 
 ## 网课

@@ -7,7 +7,8 @@ tags:
   - 组合数学
   - DP
   - 并查集
-categories: 题解
+categories:
+  - 题解
 description: '4444'
 pubDate: 2022-10-22
 ---

@@ -1,6 +1,7 @@
 ---
 title: luogu3778 商旅 题解
-categories: 题解
+categories:
+  - 题解
 tags:
   - 图论
   - 分数规划

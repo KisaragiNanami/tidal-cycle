@@ -1,12 +1,12 @@
 ---
 title: 二分图匹配简单题 题解
-urls: graph-solution-1
 tags:
   - 图论
   - 二分图
-categories: 题解
-math: true
-pubDate: 2022-07-06 21:58:08
+categories:
+  - 题解
+description: '个人题解'
+pubDate: 2022-07-06
 ---
 
 写一下近期写的简单二分图题目的题解。

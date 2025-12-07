@@ -4,7 +4,8 @@ pubDate: 2023-08-24
 tags:
   - 图论
   - 数论
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

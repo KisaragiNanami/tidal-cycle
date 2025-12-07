@@ -1,7 +1,8 @@
 ---
 title: luogu1854 花店橱窗布置 题解
 tags: DP
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-03-30
 description: 'Solution'
 ---

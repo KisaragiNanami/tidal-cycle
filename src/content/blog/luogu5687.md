@@ -1,7 +1,8 @@
 ---
 title: luogu5687 网格图 题解
 tags: 生成树
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-06-22
 description: 'Solution'
 ---

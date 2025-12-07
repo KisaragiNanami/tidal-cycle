@@ -2,7 +2,8 @@
 title: luogu3225 矿场搭建  题解
 tags:
   - 双连通分量
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2021-10-16
 ---

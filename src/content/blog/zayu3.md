@@ -5,7 +5,8 @@ tags:
   - DP
   - 区间DP
   - 并查集
-categories: 题解
+categories:
+  - 题解
 description: '3333'
 pubDate: 2022-10-04
 ---

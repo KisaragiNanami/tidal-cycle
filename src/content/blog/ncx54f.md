@@ -3,7 +3,8 @@ title: NowCoderX54F 题解
 tags:
   - 图论
   - 构造
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-08-14
 ---

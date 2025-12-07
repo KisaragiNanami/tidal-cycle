@@ -1,7 +1,8 @@
 ---
 title: luogu8817 假期计划 题解
 tags: 图论
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-11-12
 description: 'Solution'
 ---

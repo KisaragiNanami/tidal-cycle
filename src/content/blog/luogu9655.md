@@ -8,7 +8,8 @@ tags:
   - 启发式合并
   - 树论
   - 括号序列
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

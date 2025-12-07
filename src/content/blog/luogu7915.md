@@ -3,7 +3,8 @@ title: luogu7915 回文 题解
 tags:
   - 贪心
   - 搜索
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-06-20
 ---

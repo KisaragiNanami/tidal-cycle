@@ -3,7 +3,8 @@ title: luogu2519 problem a 题解
 tags:
   - 贪心
   - DP
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-04-16
 ---

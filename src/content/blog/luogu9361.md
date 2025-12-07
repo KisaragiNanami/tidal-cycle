@@ -4,7 +4,8 @@ pubDate: 2023-11-10
 tags:
   - 倍增
   - 贪心
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

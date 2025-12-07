@@ -5,7 +5,8 @@ tags:
   - 图论
   - 拓扑排序
   - 二分答案
-categories: 题解
+categories:
+  - 题解
 description: '综合一下'
 ---
 

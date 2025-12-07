@@ -7,7 +7,8 @@ tags:
   - 状态压缩
   - 搜索
   - DP
-categories: 题解
+categories:
+  - 题解
 math: true
 comment: true
 ---

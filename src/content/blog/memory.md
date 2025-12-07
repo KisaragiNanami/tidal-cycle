@@ -2,7 +2,8 @@
 
 title: 想起某些东西
 tags: 鲜花
-categories: 随笔
+categories:
+  - 随笔
 
 description: '咕噜咕噜'
 

@@ -5,7 +5,8 @@ urls: lg2757-solution
 tags:
   - 多项式哈希
   - 线段树
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

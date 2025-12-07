@@ -1,12 +1,11 @@
 ---
 title: 「图论学习笔记」#3 二分图匹配
-urls: notes-graph-3
 tags:
   - 图论
   - 二分图
-categories: 学习笔记
-math: true
-pubDate: 2022-06-22 11:38:32
+categories:
+  - 学习笔记
+pubDate: 2022-06-22
 ---
 
 ## 二分图的定义与判定

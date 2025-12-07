@@ -6,7 +6,8 @@ tags:
   - DP
   - 决策单调性
   - 双指针
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

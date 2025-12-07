@@ -3,7 +3,8 @@ title: luogu4766 Outer space invaders 题解
 tags:
   - DP
   - 区间DP
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-02-04
 description: 'Solution'
 ---

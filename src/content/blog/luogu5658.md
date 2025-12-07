@@ -2,7 +2,8 @@
 title: luogu5658 括号树 题解
 tags:
   - 栈
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-04-11
 description: 'Solution'
 ---

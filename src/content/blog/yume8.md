@@ -1,9 +1,10 @@
 ---
 title: 「琐记」#8 从今往后
-urls: yume-8
-tags: 琐记
-categories: 简记
-pubDate: 2022-05-01 14:17:27
+tags: 鲜花
+categories:
+  - 随笔
+description: '大梦'
+pubDate: 2022-05-01
 ---
 
 ![](https://s2.loli.net/2022/05/01/O9RAHslVrcdJDI6.png)

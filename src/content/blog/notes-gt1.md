@@ -1,7 +1,8 @@
 ---
 title: 「博弈论学习笔记」#1 组合游戏基础
 tags: 博弈论
-categories: 学习笔记
+categories:
+  - 学习笔记
 description: '博弈论入门'
 pubDate: 2023-01-28
 ---

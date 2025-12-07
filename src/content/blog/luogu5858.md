@@ -3,7 +3,8 @@ title: luogu5858 Golden Sword 题解
 tags:
   - DP
   - 单调队列
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-01-23
 ---

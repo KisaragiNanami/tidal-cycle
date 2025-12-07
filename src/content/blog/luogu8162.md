@@ -3,7 +3,8 @@ title: luogu8162 让我们赢得选举 题解
 tags:
   - 贪心
   - DP
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-10-22
 ---

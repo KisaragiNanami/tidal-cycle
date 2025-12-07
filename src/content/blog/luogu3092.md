@@ -3,7 +3,8 @@ title: luogu3092 No Change 题解
 tags:
   - DP
   - 状态压缩
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-01-27
 ---

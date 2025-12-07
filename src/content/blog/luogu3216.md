@@ -2,7 +2,8 @@
 title: luogu3216 数学作业 题解
 urls: lg3216-solution
 tags: 矩阵
-categories: 题解
+categories:
+  - 题解
 math: true
 abbrlink: dd3f390
 pubDate: 2022-05-15 19:07:03

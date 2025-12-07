@@ -5,7 +5,8 @@ tags:
   - DP
   - 线段树
   - 决策单调性
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

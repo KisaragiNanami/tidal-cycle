@@ -4,7 +4,8 @@ pubDate: 2023-10-23
 tags:
   - 二维偏序
   - 贪心
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

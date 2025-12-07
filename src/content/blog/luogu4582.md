@@ -5,7 +5,8 @@ tags:
   - DP
   - 树形DP
   - 树的重心
-categories: 题解
+categories:
+  - 题解
 math: true
 comment: true
 ---

@@ -6,7 +6,8 @@ tags:
   - Trie
   - 数位DP
   - 计数
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

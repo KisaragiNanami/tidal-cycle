@@ -5,7 +5,8 @@ tags:
   - 容斥原理
   - 子集反演
   - 并查集
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

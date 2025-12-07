@@ -3,7 +3,8 @@ title: luogu5052 GO 题解
 tags:
   - DP
   - 区间DP
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-04-09 description: 'Solution'
 ---
 

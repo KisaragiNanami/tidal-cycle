@@ -2,7 +2,8 @@
 title: luogu2446 大陆争霸 题解
 urls: lg2446-solution
 tags: 最短路
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2021-10-02
 ---

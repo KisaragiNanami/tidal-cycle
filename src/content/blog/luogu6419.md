@@ -6,7 +6,8 @@ tags:
   - DP
   - 树形DP
   - 换根法
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

@@ -5,7 +5,8 @@ tags:
   - 树论
   - 树上倍增
   - DP
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

@@ -3,7 +3,8 @@ title: luogu5894 robots 题解
 tags:
   - 二分答案
   - 贪心
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-07-25
 description: 'Solution'
 ---

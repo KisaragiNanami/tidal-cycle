@@ -1,9 +1,10 @@
 ---
 title: 「琐记」#9
-urls: yume-9
-tags: 琐记
-categories: 简记
-pubDate: 2022-05-28 16:42:41
+tags: 鲜花
+categories:
+  - 随笔
+description: '大梦'
+pubDate: 2022-05-28
 ---
 
 ## 胡思乱想与知难而退

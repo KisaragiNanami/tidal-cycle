@@ -1,10 +1,10 @@
 ---
 title: 「琐记」#1
-urls: yume-1
-tags: 琐记
-categories: 简记
-math: true
-pubDate: 2022-02-26 14:21:37
+tags: 鲜花
+categories:
+  - 随笔
+description: '大梦'
+pubDate: 2022-02-26
 ---
 
 ## 开学第二周

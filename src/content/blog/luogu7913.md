@@ -1,7 +1,8 @@
 ---
 title: luogu7913 廊桥分配 题解
 tags: 贪心
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-06-20
 
 ---

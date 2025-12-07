@@ -3,7 +3,8 @@ title: luogu4819 杀人游戏 题解
 tags:
   - 图论
   - 强连通分量
-categories: 题解
+categories:
+  - 题解
 pubDate: 2021-09-20
 
 ---

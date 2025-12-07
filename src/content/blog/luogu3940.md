@@ -5,7 +5,8 @@ tags:
   - 贪心
   - 并查集
   - 二分图
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

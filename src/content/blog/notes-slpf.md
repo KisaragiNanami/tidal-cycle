@@ -3,7 +3,8 @@ title: 「数据结构学习笔记」#3 树链剖分
 tags:
   - 树链剖分
   - 数据结构
-categories: 学习笔记
+categories:
+  - 学习笔记
 description: '终于学会树链剖分'
 pubDate: 2023-01-27
 ---

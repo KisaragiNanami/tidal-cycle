@@ -3,7 +3,8 @@ title: luogu3953 逛公园 题解
 tags:
   - 最短路
   - DP
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2021-10-02
 ---

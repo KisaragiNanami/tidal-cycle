@@ -7,7 +7,8 @@ tags:
   - 矩阵加速
   - 计数
   - 组合数学
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

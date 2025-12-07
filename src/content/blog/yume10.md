@@ -1,10 +1,10 @@
 ---
 title: 「琐记」#10 最后的作战
-urls: yume-10
-tags: 琐记
-categories: 简记
-abbrlink: 55fe0765
-pubDate: 2022-06-24 11:02:06
+tags: 鲜花
+categories:
+  - 随笔
+description: '大梦'
+pubDate: 2022-06-24
 ---
 
 ## 无题

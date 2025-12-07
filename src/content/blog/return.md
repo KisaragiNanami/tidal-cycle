@@ -1,7 +1,8 @@
 ---
 title: 回归
 tags: 鲜花
-categories: 随笔
+categories:
+  - 随笔
 description: '还是滚回来了'
 pubDate: 2023-01-26
 ---

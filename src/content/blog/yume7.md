@@ -1,9 +1,10 @@
 ---
 title: 「琐记」#7
-urls: yume-7
-tags: 琐记
-categories: 简记
-pubDate: 2022-04-16 19:37:48
+tags: 鲜花
+categories:
+  - 随笔
+description: '大梦'
+pubDate: 2022-04-16
 ---
 
 ## 暂别

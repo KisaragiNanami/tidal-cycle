@@ -5,7 +5,8 @@ tags:
   - DP
   - 概率论
   - 数学期望
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

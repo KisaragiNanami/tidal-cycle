@@ -1,12 +1,11 @@
 ---
 title: 中考2022 游记
-urls: zhongkao2022
 tags: 
   - 游记
   - 文化课
-categories: 游记
-math: true
-pubDate: 2022-06-11 16:10:12
+categories:
+  - 游记
+pubDate: 2022-06-11
 ---
 
 ## DAY -1

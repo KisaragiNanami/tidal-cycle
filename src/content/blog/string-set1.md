@@ -5,7 +5,8 @@ tags:
   - Trie
   - 失配树
   - 字符串
-categories: 题解
+categories:
+  - 题解
 description: '字符串滚出OI'
 pubDate: 2022-08-09
 ---

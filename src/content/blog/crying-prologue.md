@@ -2,7 +2,8 @@
 title: Crying Prologue
 pubDate: 2024-02-04
 tags: 轻小说
-categories: 文摘
+categories:
+  - 文摘
 description: '碎碎念'
 ---
 

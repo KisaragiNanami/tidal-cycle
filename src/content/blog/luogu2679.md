@@ -1,7 +1,8 @@
 ---
 title: luogu2679 子串 题解
 tags: DP
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-05-21
 ---

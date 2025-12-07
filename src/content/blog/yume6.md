@@ -1,10 +1,10 @@
 ---
 title: 「琐记」#6
-urls: yume-6
-tags: 琐记
-categories: 简记
-math: true
-pubDate: 2022-04-03 22:30:05
+tags: 鲜花
+categories:
+  - 随笔
+description: '大梦'
+pubDate: 2022-04-03
 ---
 
 ## 「周末」与「假期」

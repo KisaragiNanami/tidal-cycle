@@ -4,7 +4,8 @@ tags:
   - KMP算法
   - Trie
   - 字符串
-categories: 学习笔记
+categories:
+  - 学习笔记
 description: '字符串滚出OI'
 pubDate: 2022-08-08
 ---

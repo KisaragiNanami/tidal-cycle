@@ -1,7 +1,8 @@
 ---
 title: 关于OI，不知所言
 tags: 鲜花
-categories: 随笔
+categories:
+  - 随笔
 description: '陈年往事'
 pubDate: 2021-11-06
 ---

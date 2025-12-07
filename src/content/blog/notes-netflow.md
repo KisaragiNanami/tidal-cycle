@@ -1,13 +1,12 @@
 ---
 title: 「图论学习笔记」#5 网络流定义与最大流
-urls: notes-graph-5
 tags:
   - 网络流
   - 最大流
-categories: 学习笔记
-math: true
-abbrlink: 7f418024
-pubDate: 2022-07-03 21:13:32
+categories:
+  - 学习笔记
+description: '网络瘤'
+pubDate: 2022-07-03
 ---
 
 ## 定义

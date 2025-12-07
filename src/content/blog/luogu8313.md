@@ -3,7 +3,8 @@ title: luogu8313 [COCI2021-2022#4] Izbori
 pubDate: 2023-11-10
 tags:
   - 分治
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

@@ -3,7 +3,8 @@ title: luogu8564 ρars/ey 题解
 tags:
   - DP
   - 树形DP
-categories: 题解
+categories:
+  - 题解
 pubDate: 2022-10-21
 description: 'Solution'
 ---

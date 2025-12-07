@@ -3,7 +3,8 @@ title: luogu4591 碱基序列 题解
 tags:
   - DP
   - KMP算法
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-08-12
 ---

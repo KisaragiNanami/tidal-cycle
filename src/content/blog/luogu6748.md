@@ -4,7 +4,8 @@ tags:
   - DP
   - 树形DP
   - 贪心
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 pubDate: 2022-10-23
 ---

@@ -1,13 +1,12 @@
 ---
 title: 「图论学习笔记」#1 最小树型图
-urls: notes-graph-1
 tags:
   - 图论
   - 最小树型图
-categories: 学习笔记
-math: true
-abbrlink: 127daa3c
-pubDate: 2022-02-11 21:21:27
+categories:
+  - 学习笔记
+pubDate: 2022-02-11
+description: '定义与简单应用'
 ---
 
 ## 最小树型图

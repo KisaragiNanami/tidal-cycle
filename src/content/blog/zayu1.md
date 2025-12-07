@@ -1,15 +1,14 @@
 ---
 title: 「杂题选讲」#1
-urls: tititi-solution-1
 tags:
   - 贪心
   - DP
   - 单调队列
   - 分治
   - 杂题选讲
-categories: 题解
-math: true
-pubDate: 2022-07-26 10:57:28
+categories:
+  - 题解
+pubDate: 2022-07-26
 ---
 
 杂题选讲。

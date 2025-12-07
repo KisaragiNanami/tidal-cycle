@@ -1,12 +1,12 @@
 ---
 title: 「图论学习笔记」#4 二分图相关
-urls: notes-graph-4
 tags:
   - 图论
   - 二分图
-categories: 学习笔记
-math: true
-pubDate: 2022-06-23 21:50:46
+categories:
+  - 学习笔记
+description: '一些模型'
+pubDate: 2022-06-23
 ---
 
 ## 二分图最小点覆盖

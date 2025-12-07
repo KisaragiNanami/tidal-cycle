@@ -6,7 +6,8 @@ tags:
   - 区间DP
   - 单调队列
   - 决策单调性
-categories: 题解
+categories:
+  - 题解
 description: 'Solution'
 ---
 

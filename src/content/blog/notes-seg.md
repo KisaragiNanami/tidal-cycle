@@ -3,7 +3,8 @@ title: 「数据结构学习笔记」#1 线段树相关
 tags:
   - 线段树
   - 数据结构
-categories: 学习笔记
+categories:
+  - 学习笔记
 pubDate: 2023-01-26
 description: '线段树的一些进阶操作'
 ---

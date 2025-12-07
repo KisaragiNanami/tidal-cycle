@@ -3,7 +3,8 @@ title: luogu2568 GCD 题解
 tags:
   - 数论
   - 欧拉函数
-categories: 题解
+categories:
+  - 题解
 pubDate: 2021-08-25
 description: 'Solution'
 ---
