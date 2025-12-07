@@ -10,7 +10,7 @@ tags:
   - 子集反演
 categories:
   - 比赛
-Solution: '神秘模拟赛'
+description: '神秘模拟赛'
 ---
 
 22 年某模拟赛。
