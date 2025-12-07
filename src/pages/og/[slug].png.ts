@@ -63,7 +63,7 @@ export async function GET({
                 type: "div",
                 props: {
                   style: { fontSize: "28px", fontWeight: 600 },
-                  children: "サン猫の時間漂流",
+                  children: "七海ノ心象素描",
                 },
               },
             ],
