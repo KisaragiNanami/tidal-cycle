@@ -1,6 +1,7 @@
 ---
 title: luogu3620 数据备份 题解
-tags: 贪心
+tags:
+  - 贪心
 categories:
   - 题解
 description: 'Solution'
