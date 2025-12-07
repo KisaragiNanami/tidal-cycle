@@ -1,6 +1,7 @@
 ---
 title: luogu6419 Kamp 题解
 pubDate: 2023-10-23
+tags:
   - DP
   - 树形DP
   - 换根法
