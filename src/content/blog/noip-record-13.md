@@ -8,7 +8,8 @@ tags:
   - 容斥原理
   - 子集反演
   - 组合数学
-categories: Record
+categories:
+  - Record
 description: '少年一再呼喊'
 ---
 

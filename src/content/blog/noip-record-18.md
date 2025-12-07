@@ -8,7 +8,8 @@ tags:
   - 贪心
   - 双指针
   - 计数
-categories: Record
+categories:
+  - Record
 description: '少年对自制的工具驾轻就熟'
 ---
 

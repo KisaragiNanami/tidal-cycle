@@ -5,7 +5,8 @@ tags:
   - 欧拉路径
   - 拓扑排序
   - 图论
-categories: Record
+categories:
+  - Record
 description: '少年不放过每一个死角'
 ---
 

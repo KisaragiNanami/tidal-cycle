@@ -3,7 +3,8 @@ title: 「NOIP Record」#14 基础数论（1）
 pubDate: 2023-08-12
 tags:
   - 数论
-categories: Record
+categories:
+  - Record
 description: '少年相信足迹'
 ---
 

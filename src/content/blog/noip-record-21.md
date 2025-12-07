@@ -9,7 +9,8 @@ tags:
   - 计数
   - 组合数学
   - 贪心
-categories: Record
+categories:
+  - Record
 description: '少年望见了新大陆'
 ---
 

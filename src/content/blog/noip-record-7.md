@@ -6,7 +6,8 @@ tags:
   - 计数
   - 组合数学
   - 二项式反演
-categories: Record
+categories:
+  - Record
 description: '少年不得不审视自己'
 ---
 

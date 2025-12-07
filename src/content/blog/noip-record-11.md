@@ -8,7 +8,8 @@ tags:
   - 生成树
   - 贪心
   - Trie
-categories: Record
+categories:
+  - Record
 description: '少年感受到小路的厚实'
 ---
 

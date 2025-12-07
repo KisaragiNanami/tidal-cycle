@@ -11,7 +11,8 @@ tags:
   - 树形DP
   - 矩阵
   - 并查集
-categories: Record
+categories:
+  - Record
 description: '少年总结下经验'
 pubDate: 2023-06-20
 ---

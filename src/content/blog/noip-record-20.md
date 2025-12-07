@@ -8,7 +8,8 @@ tags:
   - 树链剖分
   - 树上差分
   - 树上倍增
-categories: Record
+categories:
+  - Record
 description: '少年开始建造舒适区'
 ---
 

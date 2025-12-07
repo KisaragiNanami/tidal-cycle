@@ -5,7 +5,8 @@ tags:
   - 贪心
   - 并查集
   - 线段树
-categories: Record
+categories:
+  - Record
 description: '少年忽略了自身的渺小'
 ---
 

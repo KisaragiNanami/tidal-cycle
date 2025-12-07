@@ -6,7 +6,8 @@ tags:
   - 二分图
   - 倍增
   - 树论
-categories: Record
+categories:
+  - Record
 description: '少年觉察到自己的弱点'
 ---
 

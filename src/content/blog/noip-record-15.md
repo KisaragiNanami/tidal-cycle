@@ -3,7 +3,8 @@ title: 「NOIP Record」#15 数论题目选讲
 pubDate: 2023-08-24
 tags:
   - 数论
-categories: Record
+categories:
+  - Record
 description: '少年随身带着纸笔'
 ---
 

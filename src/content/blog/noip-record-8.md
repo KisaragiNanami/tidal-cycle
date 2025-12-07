@@ -5,7 +5,8 @@ tags:
   - 搜索
   - 状态压缩
   - DP
-categories: Record
+categories:
+  - Record
 description: '少年不怕从头开始'
 ---
 

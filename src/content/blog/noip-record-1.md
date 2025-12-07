@@ -9,7 +9,8 @@ tags:
   - 二项式反演
   - 状态压缩
   - 边双连通分量
-categories: Record
+categories:
+  - Record
 description: '一切的开始'
 ---
 

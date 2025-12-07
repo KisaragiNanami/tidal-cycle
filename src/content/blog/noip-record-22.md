@@ -7,7 +7,8 @@ tags:
   - 树论
   - 决策单调性
   - 单调队列
-categories: Record
+categories:
+  - Record
 description: '少年要用双脚与一捧沙子渡海'
 ---
 

@@ -5,7 +5,8 @@ tags:
   - DP
   - 数位DP
   - 计数
-categories: Record
+categories:
+  - Record
 description: '少年生怕失败'
 ---
 

@@ -5,7 +5,8 @@ tags:
   - 双指针
   - 区间DP
   - 树状数组
-categories: Record
+categories:
+  - Record
 description: '少年主动去试错'
 ---
 

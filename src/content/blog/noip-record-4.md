@@ -7,7 +7,8 @@ tags:
   - 树论
   - 树上倍增
   - 分块
-categories: Record
+categories:
+  - Record
 description: '少年打磨出了自己的罗盘'
 ---
 

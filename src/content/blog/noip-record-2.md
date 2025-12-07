@@ -6,7 +6,8 @@ tags:
   - 图论
   - 博弈论
   - 计数
-categories: Record
+categories:
+  - Record
 pubDate: 2023-05-07
 description: '少年的后脚超越了前脚'
 ---

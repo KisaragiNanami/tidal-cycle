@@ -5,7 +5,8 @@ tags:
   - DP
   - 区间DP
   - 费用提前计算
-categories: Record
+categories:
+  - Record
 description: '少年长出了野心'
 ---
 

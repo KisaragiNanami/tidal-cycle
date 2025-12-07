@@ -6,7 +6,8 @@ tags:
   - DP
   - 二分图
   - 贪心
-categories: Record
+categories:
+  - Record
 description: '少年一再环顾NOI大纲'
 ---
 

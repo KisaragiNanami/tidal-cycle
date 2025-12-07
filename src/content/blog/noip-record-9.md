@@ -7,7 +7,8 @@ tags:
   - 区间DP
   - 数论
   - 计数
-categories: Record
+categories:
+  - Record
 description: '少年要建造自己的科技树'
 ---
 

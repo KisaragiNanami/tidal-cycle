@@ -7,7 +7,8 @@ tags:
   - DP
   - 树论
   - 计数
-categories: Record
+categories:
+  - Record
 description: '少年找到了节奏'
 ---
 

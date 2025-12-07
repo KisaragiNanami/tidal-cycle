@@ -5,7 +5,8 @@ tags:
   - 倍增
   - DP
   - 贪心
-categories: Record
+categories:
+  - Record
 description: '少年想挑战更多'
 ---
 
