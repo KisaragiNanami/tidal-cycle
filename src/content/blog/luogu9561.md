@@ -4,7 +4,7 @@ pubDate: 2025-07-15
 categories: 
   - 题解
 tags: 
-  - dp
+  - DP
   - 线段树
   - 计数
 description: 'Solution'

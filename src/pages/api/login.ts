@@ -9,13 +9,15 @@ export async function POST({ request }: APIContext): Promise<Response> {
 
     const secretPassword = import.meta.env.SECRET_ADMIN_PASSWORD;
     const SENSITIVE_USERS = [
-      "evesunmaple",
-      "EveSunMaple",
-      "sunmaple",
-      "SunMaple",
+      "KisaragiNanami",
+      "Nanami7",
+      "kisaraginanami",
+      "如月七海",
+      "七海七海",
       "admin",
       "博主",
-      "evesunmaple@outlook.com",
+      "2959874980@qq.com",
+      "kisaragi.nanami@qq.com",
     ];
 
     // 检查是否为敏感用户
