@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type BlogPostMeta = {
   slug: string;
@@ -13,8 +13,14 @@ type BlogPostMeta = {
   coverImage?: string | null;
 };
 
+type FilterOptions = {
+  categories: string[];
+  tags: string[];
+};
+
 type Props = {
   posts: BlogPostMeta[];
+  filterOptions?: FilterOptions;
 };
 
 type PageItem = number | "ellipsis-start" | "ellipsis-end";
@@ -47,7 +53,7 @@ const getPageItems = (current: number, total: number): PageItem[] => {
   return pages;
 };
 
-const BlogExplorer: React.FC<Props> = ({ posts }) => {
+const BlogExplorer: React.FC<Props> = ({ posts, filterOptions }) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [itemsPerPage, setItemsPerPage] = useState<number>(
@@ -57,9 +63,29 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
   const [isFilterModalOpen, setFilterModalOpen] = useState(false);
   const [draftCategory, setDraftCategory] = useState<string | null>(null);
   const [draftTags, setDraftTags] = useState<string[]>([]);
-  const filterDialogRef = useRef<HTMLDialogElement | null>(null);
+
+  const buildChipClass = (
+    isActive: boolean,
+    accent: "primary" | "secondary" = "primary",
+  ) => {
+    const base = "badge badge-lg transition-colors duration-200";
+    const active =
+      accent === "secondary"
+        ? "badge-secondary font-medium shadow-sm"
+        : "badge-primary font-medium shadow-sm";
+    const inactive =
+      accent === "secondary"
+        ? "badge-outline border-dashed border-base-content/30 text-base-content/60 hover:badge-soft hover:badge-secondary hover:cursor-pointer"
+        : "badge-outline border-dashed border-base-content/30 text-base-content/60 hover:badge-soft hover:badge-primary hover:cursor-pointer";
+
+    return [base, isActive ? active : inactive].join(" ");
+  };
 
   const { categories, tags } = useMemo(() => {
+    if (filterOptions) {
+      return filterOptions;
+    }
+
     const categorySet = new Set<string>();
     const tagSet = new Set<string>();
 
@@ -78,7 +104,7 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
       ),
       tags: Array.from(tagSet).sort((a, b) => a.localeCompare(b, "zh-CN")),
     };
-  }, [posts]);
+  }, [filterOptions, posts]);
 
   const filtered = useMemo(() => {
     return posts.filter((post) => {
@@ -104,19 +130,6 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
     const start = (currentPage - 1) * itemsPerPage;
     return filtered.slice(start, start + itemsPerPage);
   }, [filtered, currentPage, itemsPerPage]);
-
-  useEffect(() => {
-    const dialog = filterDialogRef.current;
-    if (!dialog) return;
-
-    if (isFilterModalOpen) {
-      if (typeof dialog.showModal === "function" && !dialog.open) {
-        dialog.showModal();
-      }
-    } else if (dialog.open) {
-      dialog.close();
-    }
-  }, [isFilterModalOpen]);
 
   const applyFilters = (category: string | null, tags: string[]) => {
     setSelectedCategory(category);
@@ -188,27 +201,27 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
         <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-2xl font-semibold flex items-center gap-3">
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-gradient-to-br from-primary/80 to-secondary/80 text-primary-content shadow-md">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-linear-to-br from-primary/80 to-secondary/80 text-primary-content shadow-md">
                 <i className="ri-article-line text-lg" aria-hidden="true" />
               </span>
-              博客总览
+              <span>博客总览</span>
             </h1>
             <p className="text-sm text-base-content/70 mt-2">
               总共 {posts.length} 篇文章，支持标签与分类组合筛选。
             </p>
           </div>
           <div className="flex items-center gap-3 self-start">
-            <label className="flex items-center gap-2 text-sm text-base-content/70">
+            <label className="flex items-center gap-2 text-sm border border-base-content/10 rounded-full pl-5 pr-3 shadow-sm">
               <i className="ri-layout-grid-line text-base" aria-hidden="true" />
-              <span className="sr-only">每页展示</span>
               <select
-                className="select select-bordered select-sm"
+                className="select select-sm select-ghost focus:outline-none"
                 value={itemsPerPage}
                 onChange={(event) =>
                   handleItemsPerPageChange(
                     Number.parseInt(event.target.value, 10),
                   )
                 }
+                aria-label="每页展示数量"
               >
                 {ITEMS_PER_PAGE_OPTIONS.map((option) => (
                   <option key={option} value={option}>
@@ -217,16 +230,6 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
                 ))}
               </select>
             </label>
-            {(selectedCategory || selectedTags.length > 0) && (
-              <button
-                type="button"
-                className="btn btn-sm btn-ghost"
-                onClick={clearFilters}
-              >
-                <i className="ri-refresh-line" aria-hidden="true" />
-                重置
-              </button>
-            )}
           </div>
         </header>
 
@@ -244,7 +247,8 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
               </button>
             ) : (
               <span className="badge badge-outline badge-lg border-dashed border-base-content/30 text-base-content/60">
-                <i className="ri-stack-line" aria-hidden="true" /> 全部分类
+                <i className="ri-stack-line" aria-hidden="true" />
+                <span>全部分类</span>
               </span>
             )}
 
@@ -263,8 +267,8 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
               ))
             ) : (
               <span className="badge badge-outline badge-lg border-dashed border-base-content/30 text-base-content/60">
-                <i className="ri-price-tag-3-line" aria-hidden="true" />{" "}
-                未选择标签
+                <i className="ri-price-tag-3-line" aria-hidden="true" />
+                <span>未选择标签</span>
               </span>
             )}
           </div>
@@ -273,16 +277,16 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
             {hasActiveFilters && (
               <button
                 type="button"
-                className="btn btn-sm btn-ghost"
+                className="btn btn-sm btn-outline gap-2 rounded-full border-base-content/20"
                 onClick={clearFilters}
               >
                 <i className="ri-refresh-line" aria-hidden="true" />
-                清除筛选
+                <span>清除筛选</span>
               </button>
             )}
             <button
               type="button"
-              className="btn btn-primary rounded-full gap-2"
+              className="btn btn-sm btn-primary rounded-full gap-2 shadow-sm"
               onClick={openFilterModal}
             >
               <i className="ri-equalizer-line" aria-hidden="true" />
@@ -294,134 +298,130 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
         </div>
       </section>
 
-      <dialog
-        ref={filterDialogRef}
-        className="modal modal-bottom sm:modal-middle"
-        onCancel={() => setFilterModalOpen(false)}
-        onClose={() => setFilterModalOpen(false)}
-      >
-        <div className="modal-box w-full max-w-2xl rounded-t-2xl sm:rounded-2xl">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold flex items-center gap-2">
-              <i
-                className="ri-equalizer-line text-primary"
-                aria-hidden="true"
-              />
-              筛选文章
-            </h2>
-            <button
-              type="button"
-              className="btn btn-sm btn-circle btn-ghost"
-              onClick={closeFilterModal}
-              aria-label="关闭筛选"
-            >
-              ✕
-            </button>
-          </div>
-
-          <div className="space-y-6 max-h-[60vh] overflow-y-auto pr-1">
-            <section>
-              <h3 className="text-sm font-medium text-base-content/70 flex items-center gap-2">
-                <i className="ri-stack-line" aria-hidden="true" /> 分类
-              </h3>
-              <div className="mt-3 flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={() => handleDraftCategoryToggle(null)}
-                  className={`btn btn-xs rounded-full border transition-all ${
-                    draftCategory === null
-                      ? "btn-primary"
-                      : "btn-ghost border-base-content/10 hover:border-primary/40"
-                  }`}
-                >
-                  全部
-                </button>
-                {categories.map((category) => {
-                  const isActive = draftCategory === category;
-                  return (
-                    <button
-                      key={category}
-                      type="button"
-                      onClick={() => handleDraftCategoryToggle(category)}
-                      className={`btn btn-xs rounded-full border transition-all ${
-                        isActive
-                          ? "btn-primary"
-                          : "btn-ghost border-base-content/10 hover:border-primary/40"
-                      }`}
-                    >
-                      {category}
-                    </button>
-                  );
-                })}
-              </div>
-            </section>
-
-            <section>
-              <h3 className="text-sm font-medium text-base-content/70 flex items-center gap-2">
-                <i className="ri-price-tag-3-line" aria-hidden="true" /> 标签
-              </h3>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {tags.length === 0 ? (
-                  <span className="text-sm text-base-content/60">暂无标签</span>
-                ) : (
-                  tags.map((tag) => {
-                    const isActive = draftTags.includes(tag);
-                    return (
-                      <button
-                        key={tag}
-                        type="button"
-                        onClick={() => handleDraftTagToggle(tag)}
-                        className={`badge badge-lg border transition-all cursor-pointer select-none ${
-                          isActive
-                            ? "badge-primary text-primary-content"
-                            : "badge-outline border-base-content/20 hover:border-primary/50 hover:text-primary"
-                        }`}
-                      >
-                        #{tag}
-                      </button>
-                    );
-                  })
-                )}
-              </div>
-            </section>
-          </div>
-
-          <div className="modal-action mt-6">
-            <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-end">
+      {isFilterModalOpen && (
+        <dialog
+          className="modal modal-bottom sm:modal-middle"
+          open
+          onCancel={(event) => {
+            event.preventDefault();
+            setFilterModalOpen(false);
+          }}
+          onClose={() => setFilterModalOpen(false)}
+        >
+          <div className="modal-box w-full max-w-2xl rounded-t-2xl sm:rounded-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold flex items-center gap-2">
+                <i
+                  className="ri-equalizer-line text-primary"
+                  aria-hidden="true"
+                />
+                筛选文章
+              </h2>
               <button
                 type="button"
-                className="btn btn-ghost"
-                onClick={handleModalReset}
-              >
-                重置选择
-              </button>
-              <button
-                type="button"
-                className="btn btn-ghost"
+                className="btn btn-sm btn-circle btn-ghost"
                 onClick={closeFilterModal}
+                aria-label="关闭筛选"
               >
-                取消
-              </button>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleModalApply}
-              >
-                应用筛选
+                ✕
               </button>
             </div>
+
+            <div className="space-y-6 max-h-[60vh] overflow-y-auto pr-1">
+              <section>
+                <h3 className="text-sm font-medium text-base-content/70 flex items-center gap-2">
+                  <i className="ri-stack-line" aria-hidden="true" />
+                  <span>分类</span>
+                </h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleDraftCategoryToggle(null)}
+                    className={buildChipClass(
+                      draftCategory === null,
+                      "secondary",
+                    )}
+                  >
+                    全部
+                  </button>
+                  {categories.map((category) => {
+                    const isActive = draftCategory === category;
+                    return (
+                      <button
+                        key={category}
+                        type="button"
+                        onClick={() => handleDraftCategoryToggle(category)}
+                        className={buildChipClass(isActive, "secondary")}
+                      >
+                        {category}
+                      </button>
+                    );
+                  })}
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-sm font-medium text-base-content/70 flex items-center gap-2">
+                  <i className="ri-price-tag-3-line" aria-hidden="true" />
+                  <span>标签</span>
+                </h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {tags.length === 0 ? (
+                    <span className="text-sm text-base-content/60">
+                      暂无标签
+                    </span>
+                  ) : (
+                    tags.map((tag) => {
+                      const isActive = draftTags.includes(tag);
+                      return (
+                        <button
+                          key={tag}
+                          type="button"
+                          onClick={() => handleDraftTagToggle(tag)}
+                          className={buildChipClass(isActive)}
+                        >
+                          {tag}
+                        </button>
+                      );
+                    })
+                  )}
+                </div>
+              </section>
+            </div>
+
+            <div className="modal-action mt-6">
+              <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-end">
+                <button
+                  type="button"
+                  className="btn btn-soft rounded-xl"
+                  onClick={handleModalReset}
+                >
+                  重置选择
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-soft rounded-xl"
+                  onClick={closeFilterModal}
+                >
+                  取消
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary rounded-xl"
+                  onClick={handleModalApply}
+                >
+                  应用筛选
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-        <form
-          method="dialog"
-          className="modal-backdrop"
-          onSubmit={() => setFilterModalOpen(false)}
-        >
-          <button type="submit" aria-label="关闭">
-            关闭
-          </button>
-        </form>
-      </dialog>
+          <form method="dialog" className="modal-backdrop">
+            <button type="submit" onClick={closeFilterModal}>
+              close
+            </button>
+          </form>
+        </dialog>
+      )}
 
       <section className="space-y-6">
         {currentItems.length === 0 ? (
@@ -477,7 +477,11 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
                         key={`${post.slug}-tag-${tag}`}
                         className="badge badge-outline whitespace-nowrap"
                       >
-                        <i className="ri-hashtag" aria-hidden="true" /> {tag}
+                        <i
+                          className="ri-price-tag-3-line mr-1"
+                          aria-hidden="true"
+                        />
+                        <span>{tag}</span>
                       </span>
                     ))}
                   </div>
@@ -488,14 +492,14 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
                         className="ri-book-open-line text-base"
                         aria-hidden="true"
                       />
-                      {post.words.toLocaleString()} 字
+                      <span>{post.words.toLocaleString()} 字</span>
                     </span>
                     <span className="flex items-center gap-2">
                       <i
                         className="ri-time-line text-base"
                         aria-hidden="true"
                       />
-                      预计 {post.readingMinutes} 分钟
+                      <span>预计 {post.readingMinutes} 分钟</span>
                     </span>
                   </div>
                 </div>
@@ -524,7 +528,7 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
               disabled={currentPage === 1}
             >
               <i className="ri-arrow-left-line" aria-hidden="true" />
-              上一页
+              <span>上一页</span>
             </button>
             {getPageItems(currentPage, totalPages).map((item) => {
               if (item === "ellipsis-start" || item === "ellipsis-end") {
@@ -557,7 +561,7 @@ const BlogExplorer: React.FC<Props> = ({ posts }) => {
               }
               disabled={currentPage === totalPages}
             >
-              下一页
+              <span>下一页</span>
               <i className="ri-arrow-right-line" aria-hidden="true" />
             </button>
           </nav>

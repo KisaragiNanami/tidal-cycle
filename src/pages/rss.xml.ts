@@ -14,7 +14,7 @@ export async function GET(context: any) {
   const posts = await getAllPostsWithShortLinks(context.site);
 
   function replacePath(content: string, siteUrl: string): string {
-    return content.replace(/(src|href)="([^"]+)"/g, (match, attr, value) => {
+    return content.replaceAll(/(src|href)="([^"]+)"/g, (match, attr, value) => {
       if (!/^https?:\/\/|^\/\//.test(value) && !value.startsWith("data:")) {
         try {
           return `${attr}="${new URL(value, siteUrl).toString()}"`;
@@ -43,13 +43,13 @@ export async function GET(context: any) {
         guid: post.longUrl,
         content,
         pubDate: new Date(pubDate),
-        customData: "<dc:creator><![CDATA[七海の心象素描]]></dc:creator>",
+        customData: "<dc:creator><![CDATA[七海ノ心象素描]]></dc:creator>",
       };
     }),
   );
 
   return rss({
-    title: "海之羽翼",
+    title: "七海ノ心象素描",
     description: "一个孤独的地方，散落着一个人的人生碎片",
     site: context.site.toString(),
     items,
@@ -59,7 +59,7 @@ export async function GET(context: any) {
       <atom:link href="${new URL(context.url.pathname, context.site)}" rel="self" type="application/rss+xml" />
       <image>
         <url>${new URL("/favicon.png", context.site).toString()}</url>
-        <title>海之羽翼</title>
+        <title>七海ノ心象素描</title>
         <link>${context.site}</link>
       </image>
     `,

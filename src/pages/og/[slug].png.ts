@@ -19,8 +19,10 @@ export async function GET({
   props,
 }: APIContext<{ post: CollectionEntry<"blog"> }>) {
   const { post } = props;
-  const fontRegular = fs.readFileSync("public/fonts/NotoSansSC-Regular.ttf");
-  const fontBold = fs.readFileSync("public/fonts/NotoSansSC-Bold.ttf");
+  const fontRegular = fs.readFileSync(
+    "public/fonts/MapleMono-NF-CN-Regular.woff2",
+  );
+  const fontBold = fs.readFileSync("public/fonts/MapleMono-NF-CN-Bold.woff2");
   const iconBuffer = fs.readFileSync("public/favicon-dark.svg");
   const iconBase64 = `data:image/svg+xml;base64,${iconBuffer.toString("base64")}`;
 
@@ -41,7 +43,7 @@ export async function GET({
         padding: "60px",
         background: "linear-gradient(135deg, #0f172a, #1e293b)",
         color: "#fff",
-        fontFamily: '"Noto Sans SC"',
+        fontFamily: "Maple Mono",
         position: "relative",
       },
       children: [
@@ -184,8 +186,8 @@ export async function GET({
     width: 1200,
     height: 630,
     fonts: [
-      { name: "Noto Sans SC", data: fontRegular, weight: 400, style: "normal" },
-      { name: "Noto Sans SC", data: fontBold, weight: 700, style: "normal" },
+      { name: "Maple Mono", data: fontRegular, weight: 400, style: "normal" },
+      { name: "Maple Mono", data: fontBold, weight: 700, style: "normal" },
     ],
   });
 

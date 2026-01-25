@@ -10,7 +10,7 @@ export async function GET(context: any) {
       new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
   );
   return rss({
-    title: "纵横七海 阅遍千秋",
+    title: "七海ノ心象素描",
     description: "一个孤独的地方，散落着一个人的人生碎片",
     site: context.site,
     items: sortedPosts.map((blog: any) => ({

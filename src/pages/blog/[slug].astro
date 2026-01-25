@@ -8,6 +8,7 @@ import Layout from "@layouts/Layout.astro";
 import BlogLikeButton from "@/components/blog/LikeButton";
 import ViewTracker from "@/components/blog/ViewTracker";
 import { getAllPostsWithShortLinks } from "@/lib/blog";
+import type { ReadingStats } from "@/lib/readingMetrics";
 import dayjs from "@/lib/telegram/dayjs-setup";
 
 export const prerender = true;
@@ -21,35 +22,19 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  post: CollectionEntry<"blog"> & { shortLink: string | null; longUrl: string };
+  post: CollectionEntry<"blog"> & {
+    shortLink: string | null;
+    longUrl: string;
+    readingStats: ReadingStats;
+  };
 }
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
 const { title, description, pubDate, updated, image } = post.data;
+const { words, readingMinutes } = post.readingStats;
+const readTime = `预计阅读 ${readingMinutes} 分钟`;
 
-const author = "如月七海";
-// --- 预计阅读时间计算 ---
-// 中文阅读速度（字/分钟）
-const chineseWPM = 300;
-// 英文阅读速度（单词/分钟）
-const englishWPM = 200;
-
-// 移除 Markdown 格式，获得更纯净的文本内容
-const plainText = post.body.replace(/---[\s\S]*?---/, ""); // 移除 frontmatter
-
-// 匹配中文字符
-const chineseChars = (plainText.match(/[\u4e00-\u9fa5]/g) || []).length;
-// 匹配英文单词（包括带连字符的单词）
-const englishWords = (plainText.match(/[a-zA-Z0-9'-]+/g) || []).length;
-
-// 分别计算阅读时间，然后相加
-const chineseMinutes = chineseChars / chineseWPM;
-const englishMinutes = englishWords / englishWPM;
-const totalMinutes = Math.ceil(chineseMinutes + englishMinutes);
-
-// 最终显示的字数和阅读时间
-const words = chineseChars + englishWords;
-const readTime = `预计阅读 ${totalMinutes} 分钟`;
+const author = "Nanami^2";
 
 const shareUrl = post.shortLink || post.longUrl;
 
@@ -78,7 +63,7 @@ const customComponents = {
               class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               loading="eager"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            <div class="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
           </div>
         )
       }
@@ -108,7 +93,7 @@ const customComponents = {
             </div>
             <div class="flex flex-col">
               <span class="font-semibold text-base-content">{author}</span>
-              <span class="text-sm text-base-content/60">局外人</span>
+              <span class="text-sm text-base-content/60">高三学生</span>
             </div>
           </div>
 

@@ -18,8 +18,8 @@
 }
 
 @font-face {
-  font-family: "Maple";
-  src: url("/fonts/MapleMono-Regular.ttf.woff2") format("woff2");
+  font-family: "Maple Mono";
+  src: url("/fonts/MapleMono-NF-CN-Regular.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
@@ -30,7 +30,7 @@ pre {
 }
 
 code {
-  font-family: "Maple", monospace;
+  font-family: "Maple Mono";
   font-size: 0.875rem;
   line-height: 1.5;
 }

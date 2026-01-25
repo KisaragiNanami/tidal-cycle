@@ -10,6 +10,9 @@ type SearchIndexEntry = {
   tags: string[];
   categories: string[];
   contentText: string;
+  words: number;
+  readingMinutes: number;
+  pubDate: string;
 };
 
 type MatchDetails = {
@@ -28,6 +31,9 @@ type ClientSearchResult = {
   matchScore: number;
   matchDetails: MatchDetails;
   keywords: string[];
+  words: number;
+  readingMinutes: number;
+  pubDate: string;
 };
 
 type ContentMetadataResponse = {
@@ -36,7 +42,7 @@ type ContentMetadataResponse = {
 };
 
 const escapeRegExp = (text: string) =>
-  text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  text.replaceAll(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const highlightMatch = (text: string, keywords: string[]) => {
   if (!text) return "";
@@ -47,7 +53,7 @@ const highlightMatch = (text: string, keywords: string[]) => {
   sortedKeywords.forEach((keyword) => {
     const escapedKeyword = escapeRegExp(keyword);
     const regex = new RegExp(`(${escapedKeyword})`, "gi");
-    result = result.replace(regex, '<mark class="search-mark">$1</mark>');
+    result = result.replaceAll(regex, '<mark class="search-mark">$1</mark>');
   });
 
   return result;
@@ -91,6 +97,8 @@ const SearchBar: React.FC = () => {
   };
 
   useEffect(() => {
+    if (!isExpanded && !showDropdown) return;
+
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node | null;
       if (target && !containerRef.current?.contains(target)) {
@@ -103,9 +111,11 @@ const SearchBar: React.FC = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [collapseIfEmpty]);
+  }, [collapseIfEmpty, isExpanded, showDropdown]);
 
   useEffect(() => {
+    if (!isExpanded && !showDropdown) return;
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setShowDropdown(false);
@@ -118,12 +128,14 @@ const SearchBar: React.FC = () => {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [collapseIfEmpty]);
+  }, [collapseIfEmpty, isExpanded, showDropdown]);
 
   useEffect(() => {
     if (!isExpanded || metadataLoaded) return;
 
     let isActive = true;
+    let idleHandle: number | null = null;
+    let timeoutHandle: number | null = null;
 
     const loadMetadata = async () => {
       try {
@@ -146,10 +158,46 @@ const SearchBar: React.FC = () => {
       }
     };
 
-    void loadMetadata();
+    const hasWindow = typeof window !== "undefined";
+
+    if (hasWindow && "requestIdleCallback" in window) {
+      const runtimeWindow = window as typeof window & {
+        requestIdleCallback: (
+          callback: IdleRequestCallback,
+          options?: IdleRequestOptions,
+        ) => number;
+        cancelIdleCallback: (handle: number) => void;
+      };
+
+      idleHandle = runtimeWindow.requestIdleCallback(
+        () => {
+          void loadMetadata();
+        },
+        { timeout: 800 },
+      );
+    } else if (hasWindow) {
+      timeoutHandle = window.setTimeout(() => {
+        void loadMetadata();
+      }, 200);
+    }
 
     return () => {
       isActive = false;
+      if (
+        idleHandle !== null &&
+        typeof window !== "undefined" &&
+        "cancelIdleCallback" in window
+      ) {
+        (
+          window as typeof window & {
+            cancelIdleCallback: (handle: number) => void;
+          }
+        ).cancelIdleCallback(idleHandle);
+      }
+
+      if (timeoutHandle !== null && typeof window !== "undefined") {
+        window.clearTimeout(timeoutHandle);
+      }
     };
   }, [isExpanded, metadataLoaded]);
 
@@ -300,6 +348,9 @@ const SearchBar: React.FC = () => {
               matchScore,
               matchDetails,
               keywords: rawKeywords,
+              words: entry.words ?? 0,
+              readingMinutes: entry.readingMinutes ?? 1,
+              pubDate: entry.pubDate ?? "",
             });
           });
 
@@ -388,6 +439,7 @@ const SearchBar: React.FC = () => {
         id="search-bar"
         className={searchBarClasses}
       >
+        <span className="sr-only">搜索</span>
         <div className="search-icon px-2 text-base-content/80">
           <i
             className="ri-search-line text-lg leading-none"
@@ -431,7 +483,7 @@ const SearchBar: React.FC = () => {
                 <i className="ri-equalizer-line text-base" aria-hidden="true" />
                 <span>筛选</span>
               </button>
-              <div className="card dropdown-content z-[1] shadow-lg bg-base-200 rounded-xl w-72">
+              <div className="card dropdown-content z-10 shadow-lg bg-base-200 rounded-xl w-72">
                 <div className="card-body p-4 gap-3">
                   <div>
                     <h6 className="font-semibold text-base">标签</h6>
@@ -548,48 +600,86 @@ const SearchBar: React.FC = () => {
               <p className="text-base-content/70">没有匹配的结果</p>
             </div>
           ) : (
-            results.map((result) => (
-              <a
-                key={result.url}
-                href={result.url}
-                className="search-result block p-3 mb-3 hover:bg-base-200 rounded-lg transition-colors duration-300 border-l-4 border-transparent hover:border-primary group"
-              >
-                <h3
-                  className="font-semibold text-lg group-hover:text-primary transition-colors"
-                  dangerouslySetInnerHTML={{
-                    __html: highlightMatch(result.title, result.keywords),
-                  }}
-                />
-                {result.snippet ? (
-                  <p
-                    className="text-base-content/80 mt-2 line-clamp-3"
-                    dangerouslySetInnerHTML={{
-                      __html: highlightMatch(result.snippet, result.keywords),
-                    }}
-                  />
-                ) : null}
-                <div className="flex flex-wrap gap-1 mt-3">
-                  {result.categories.map((category) => (
-                    <span
-                      key={`${result.url}-category-${category}`}
-                      className={`badge badge-neutral ${result.matchDetails.categories ? "badge-primary" : ""}`}
-                      dangerouslySetInnerHTML={{
-                        __html: highlightMatch(category, result.keywords),
-                      }}
-                    />
-                  ))}
-                  {result.tags.map((tag) => (
-                    <span
-                      key={`${result.url}-tag-${tag}`}
-                      className={`badge badge-outline ${result.matchDetails.tags ? "text-primary border-primary" : ""}`}
-                      dangerouslySetInnerHTML={{
-                        __html: highlightMatch(tag, result.keywords),
-                      }}
-                    />
-                  ))}
-                </div>
-              </a>
-            ))
+            <div className="space-y-4">
+              {results.map((result) => (
+                <a
+                  key={result.url}
+                  href={result.url}
+                  className="group relative block bg-base-200/40 border border-base-content/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3
+                        className="font-semibold text-lg group-hover:text-primary transition-colors"
+                        dangerouslySetInnerHTML={{
+                          __html: highlightMatch(result.title, result.keywords),
+                        }}
+                      />
+                      {result.snippet && (
+                        <p
+                          className="text-base-content/70 mt-2 text-sm leading-relaxed line-clamp-3"
+                          dangerouslySetInnerHTML={{
+                            __html: highlightMatch(
+                              result.snippet,
+                              result.keywords,
+                            ),
+                          }}
+                        />
+                      )}
+                    </div>
+                    <span className="shrink-0 rounded-xl bg-primary/10 text-primary text-xs font-medium px-3 py-1">
+                      {new Date(result.pubDate).toLocaleDateString("zh-CN", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </div>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {result.categories.map((category) => (
+                      <span
+                        key={`${result.url}-category-${category}`}
+                        className={[
+                          "inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+                          result.matchDetails.categories
+                            ? "bg-secondary/15 border-secondary/40 text-secondary"
+                            : "border-secondary/30 text-secondary/80",
+                        ].join(" ")}
+                        dangerouslySetInnerHTML={{
+                          __html: highlightMatch(category, result.keywords),
+                        }}
+                      />
+                    ))}
+                    {result.tags.map((tag) => (
+                      <span
+                        key={`${result.url}-tag-${tag}`}
+                        className={[
+                          "inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+                          result.matchDetails.tags
+                            ? "bg-primary/10 border-primary/40 text-primary"
+                            : "border-base-content/25 text-base-content/70",
+                        ].join(" ")}
+                        dangerouslySetInnerHTML={{
+                          __html: highlightMatch(tag, result.keywords),
+                        }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-base-content/60">
+                    <span className="flex items-center gap-1">
+                      <i className="ri-book-open-line text-base" aria-hidden />
+                      {result.words.toLocaleString()} 字
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <i className="ri-time-line text-base" aria-hidden />
+                      预计 {result.readingMinutes} 分钟
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
           )}
         </div>
       </div>

@@ -7,17 +7,21 @@ import "remixicon/fonts/remixicon.css";
 import Footer from "@components/layout/Footer.astro";
 import Header from "@components/layout/Header.astro";
 import Hero from "@components/layout/Hero.astro";
+import MobileDrawerPanel from "@components/layout/MobileDrawerPanel.astro";
 import Sidebar from "@components/layout/Sidebar.astro";
 import BackToTop from "@components/widgets/BackToTop.astro";
 import type { MarkdownHeading } from "astro";
 
 const SITE_TITLE = "七海ノ心象素描";
-const SITE_DESCRIPTION = "ああかがやきの四月の底を、はぎしり燃えてゆききする。";
-const SITE_AUTHOR = "如月七海";
+const SITE_DESCRIPTION = "一个孤独的地方，散落着一个人的人生碎片";
+const SITE_AUTHOR = "Nanami^2";
 const OG_IMAGE_DEFAULT = "/default-social-image.png";
-const TWITTER_HANDLE = "@zna1tsu";
+const TWITTER_HANDLE = "@zNa1tSu";
 const GITHUB_URL = "https://github.com/KisaragiNanami";
 const TELEGRAM_URL = "https://t.me/kisaragi_nanami";
+const CHANNEL_URL = "https://t.me/kisanami_blog";
+const QQ_GROUP_NUMBER = "1072614878";
+const EMAIL_ADDRESS = "kisaragi.nanami@qq.com";
 
 interface BreadcrumbItem {
   label: string;
@@ -139,7 +143,7 @@ const breadcrumbs = providedBreadcrumbs ?? buildDefaultBreadcrumbs();
         >
           <div class="bg-base-200/60 backdrop-blur-sm border-b border-base-content/10 p-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-primary-content">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-primary to-secondary text-primary-content">
                 <i class="ri-leaf-line" aria-hidden="true"></i>
               </span>
               <div>
@@ -162,7 +166,7 @@ const breadcrumbs = providedBreadcrumbs ?? buildDefaultBreadcrumbs();
                 const isActive =
                   link.href === "/"
                     ? currentPath === "/"
-                    : currentPath === link.href || currentPath.startsWith(`${link.href}/`);
+                  : currentPath === link.href || currentPath.startsWith(`${link.href}/`);
                 return (
                   <a
                     href={link.href}
@@ -181,21 +185,20 @@ const breadcrumbs = providedBreadcrumbs ?? buildDefaultBreadcrumbs();
 
             <div class="divider my-4" />
 
-            <div class="space-y-4">
-              <Sidebar
-                idPrefix="mobile-sidebar"
-                headings={headings}
-                author={SITE_AUTHOR}
-                twitterHandle={TWITTER_HANDLE}
-                githubUrl={GITHUB_URL}
-                telegramUrl={TELEGRAM_URL}
-              />
-            </div>
+            <MobileDrawerPanel
+              author={SITE_AUTHOR}
+              twitterHandle={TWITTER_HANDLE}
+              githubUrl={GITHUB_URL}
+              telegramUrl={TELEGRAM_URL}
+              channelUrl={CHANNEL_URL}
+              qqGroupNumber={QQ_GROUP_NUMBER}
+              emailAddress={EMAIL_ADDRESS}
+            />
           </div>
         </div>
         <button
           type="button"
-          class="flex-1 h-full bg-black/10 hover:bg-black/20 transition-colors duration-200"
+          class="flex-1 h-full transition-colors duration-200"
           data-close-drawer="true"
           aria-label="点击关闭导航"
         >
@@ -279,16 +282,16 @@ const breadcrumbs = providedBreadcrumbs ?? buildDefaultBreadcrumbs();
           <slot />
         </main>
 
-        <div class="hidden lg:block lg:col-span-1">
-          <Sidebar
-            idPrefix="desktop-sidebar"
-            headings={headings}
-            author={SITE_AUTHOR}
-            twitterHandle={TWITTER_HANDLE}
-            githubUrl={GITHUB_URL}
-            telegramUrl={TELEGRAM_URL}
-          />
-        </div>
+        <Sidebar
+          headings={headings}
+          author={SITE_AUTHOR}
+          twitterHandle={TWITTER_HANDLE}
+          githubUrl={GITHUB_URL}
+          telegramUrl={TELEGRAM_URL}
+          channelUrl={CHANNEL_URL}
+          qqGroupNumber={QQ_GROUP_NUMBER}
+          emailAddress={EMAIL_ADDRESS}
+        />
       </div>
     </div>
 

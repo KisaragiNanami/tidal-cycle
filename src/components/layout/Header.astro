@@ -22,15 +22,16 @@ const { siteTitle, navLinks = [], currentPath, mobileDrawerId } = Astro.props;
           class="flex items-center space-x-2 group"
           aria-controls={mobileDrawerId}
           aria-haspopup="dialog"
+          aria-label={`${siteTitle}，打开导航`}
           onclick={`if (window.matchMedia('(min-width: 1024px)').matches) return; event.preventDefault(); document.getElementById('${mobileDrawerId}')?.showModal?.();`}
         >
           <div
-            class="w-7 h-7 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+            class="w-7 h-7 bg-linear-to-br from-primary to-secondary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
           >
             <i class="ri-leaf-line text-primary-content text-sm"></i>
           </div>
           <span
-            class="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hidden md:block"
+            class="text-lg font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent hidden md:block"
           >
             {siteTitle}
           </span>
@@ -59,18 +60,18 @@ const { siteTitle, navLinks = [], currentPath, mobileDrawerId } = Astro.props;
               >
                 <span>{link.label}</span>
                 {isActive && (
-                  <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
+                  <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-linear-to-r from-primary to-secondary rounded-full"></span>
                 )}
               </a>
             );
           })}
         </nav>
 
-        <SearchBar client:load />
+        <SearchBar client:idle />
       </div>
 
       <div class="flex items-center gap-2 lg:hidden">
-        <SearchBar client:load />
+        <SearchBar client:idle />
       </div>
     </div>
   </div>
