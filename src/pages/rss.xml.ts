@@ -50,7 +50,7 @@ export async function GET(context: any) {
 
   return rss({
     title: "七海ノ心象素描",
-    description: "一个孤独的地方，散落着一个人的人生碎片",
+    description: "Cross+Channel",
     site: context.site.toString(),
     items,
     stylesheet: "/rss.xsl",

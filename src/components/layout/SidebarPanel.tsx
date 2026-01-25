@@ -142,12 +142,14 @@ function ProfileCard({
             Author
           </p>
           <h3 className="font-semibold text-base-content">{author}</h3>
-          <p className="text-xs text-base-content/60">高三学生 · 技术手作</p>
+          <p className="text-xs text-base-content/60">
+            大一学生 | 不是很聪明的样子
+          </p>
         </div>
       </div>
 
       <p className="text-sm text-base-content/70 leading-relaxed mb-4">
-        如果可以，请送我一张书签
+        いっか雲間から降りそそぐ
       </p>
 
       <div className="flex items-center gap-2">

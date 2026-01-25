@@ -17,23 +17,54 @@
   }
 }
 
-@font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode.woff2") format("woff2");
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-}
-
-pre {
+/* .pre {
   @apply mockup-code;
+} */
+
+
+@font-face {
+  font-family: 'Maple Mono NF';
+  src: url('/fonts/MapleMono-NF-Regular.woff2') format('woff2');
 }
 
-code {
-  font-family: "Cascadia Code";
-  font-size: 0.875rem;
-  line-height: 1.5;
+@font-face {
+  font-family: 'inder';
+  src: url('/fonts/inder-latin-400-normal.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'HarmonyOS Sans';
+  src: url('/fonts/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
+}
+
+body {
+
+  font-family: 'inder', 'HarmonyOS Sans', sans-serif;
+  
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2c3e50; 
+  font-variant-east-asian: proportional-width;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+pre, 
+code, 
+.astro-code, 
+.astro-code span {
+  font-family: 'Maple Mono NF', monospace !important;
+  font-size: 1em !important;
+  font-variant-ligatures: normal !important;
+}
+
+.astro-code .token.comment,
+.astro-code .token.italic {
+  font-style: italic !important;
+  opacity: 0.8;
+}
+
 
 .saro-code {
   @apply relative my-6 rounded-xl border border-base-content/20 bg-transparent overflow-hidden;

@@ -41,7 +41,7 @@ export async function GET({
         padding: "60px",
         background: "linear-gradient(135deg, #0f172a, #1e293b)",
         color: "#fff",
-        fontFamily: "Maple Mono",
+        fontFamily: "HarmonyOS Sans",
         position: "relative",
       },
       children: [
@@ -184,8 +184,13 @@ export async function GET({
     width: 1200,
     height: 630,
     fonts: [
-      { name: "Maple Mono", data: fontRegular, weight: 400, style: "normal" },
-      { name: "Maple Mono", data: fontBold, weight: 700, style: "normal" },
+      {
+        name: "HarmonyOS Sans",
+        data: fontRegular,
+        weight: 400,
+        style: "normal",
+      },
+      { name: "HarmonyOS Sans", data: fontBold, weight: 700, style: "normal" },
     ],
   });
 
