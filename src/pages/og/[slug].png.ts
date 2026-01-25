@@ -20,9 +20,9 @@ export async function GET({
 }: APIContext<{ post: CollectionEntry<"blog"> }>) {
   const { post } = props;
   const fontRegular = fs.readFileSync(
-    "public/fonts/HarmonyOS_Sans_SC_Regular.woff2",
+    "public/fonts/HarmonyOS_Sans_SC_Regular.ttf",
   );
-  const fontBold = fs.readFileSync("public/fonts/HarmonyOS_Sans_SC_Bold.woff2");
+  const fontBold = fs.readFileSync("public/fonts/HarmonyOS_Sans_SC_Bold.ttf");
   const iconBuffer = fs.readFileSync("public/favicon-dark.svg");
   const iconBase64 = `data:image/svg+xml;base64,${iconBuffer.toString("base64")}`;
 
