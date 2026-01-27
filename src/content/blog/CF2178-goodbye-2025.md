@@ -3,7 +3,7 @@ title: CF2178 Goodbye 2025 个人题解
 pubDate: 2026-01-03
 categories: 
   - 比赛
-  - 题解
+  - Codeforces
 tags: 
   - 构造
   - 贪心

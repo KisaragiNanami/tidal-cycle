@@ -7,7 +7,7 @@ tags:
   - DP
   - 拓扑排序
 categories:
-  - 题解
+  - LOJ β Round
   - 比赛
 description: '个人题解'
 ---

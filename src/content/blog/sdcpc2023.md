@@ -3,7 +3,8 @@ title: SDCPC2023 个人题解
 pubDate: 2025-07-20
 categories: 
   - 比赛
-  - 题解
+  - XCPC
+  - SDCPC
 tags: 
   - 二进制
   - 并查集

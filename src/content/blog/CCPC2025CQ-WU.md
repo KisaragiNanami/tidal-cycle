@@ -6,7 +6,8 @@ tags:
   - 数学
 categories:
   - 比赛
-  - 题解
+  - XCPC
+  - CCPC
 description: '断断续续做着玩'
 ---
 ## A. 找规律

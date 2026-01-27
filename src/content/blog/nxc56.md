@@ -4,9 +4,8 @@ tags:
   - 贪心
   - 构造
   - 最短路
-  - NowCoder
 categories:
-  - 题解
+  - NowCoder
   - 比赛
 description: '个人题解'
 pubDate: 2022-08-29
