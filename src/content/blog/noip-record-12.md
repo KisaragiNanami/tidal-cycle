@@ -1,6 +1,6 @@
 ---
 title: 「NOIP Record」#12 并查集
-pubDate: 2023-08-04
+pubDate: 2023-08-05
 tags:
   - 并查集
   - 二分图

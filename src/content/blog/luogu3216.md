@@ -33,7 +33,17 @@ description: 'Solution'
 那么就有
 
 $$
-\begin{bmatrix} f(i) \\ i \\ 1 \end{bmatrix} = A \begin{bmatrix} f(i-1) \\ i-1 \\ 1 \end{bmatrix}
+\begin{bmatrix} f(i)
+\\
+i
+\\
+1
+\end{bmatrix} = A \begin{bmatrix} f(i-1)
+\\
+i-1
+\\
+1
+\end{bmatrix}
 $$
 
 
@@ -41,12 +51,24 @@ $$
 进一步得到
 
 $$
-\begin{bmatrix} f(n) \\ i \\ 1 \end{bmatrix} = A^{n-1} \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+\begin{bmatrix} f(n)
+\\
+i
+\\
+1
+\end{bmatrix} = A^{n-1}
+\begin{bmatrix}
+0
+\\
+0
+\\
+1
+\end{bmatrix}
 $$
 
 
 
-由于 $\lfloor \lg i \rfloor  +1 $ 在 $[1,9]$，$[10,99]$，$[100,999]$  这一类区间里面都相同，所以可以按照每一段分别处理，具体见代码。
+由于 $\lfloor  \lg i \rfloor  +1$ 在 $[1,9]$，$[10,99]$，$[100,999]$  这一类区间里面都相同，所以可以按照每一段分别处理，具体见代码。
 
 注意上面的矩阵变换！必须保证先处理矩阵的幂，再统计答案。统计答案只需要累乘每一次的结果就行了。
 

@@ -19,7 +19,9 @@ pubDate: 2022-08-12
 将初始魔法值搞成一个向量，$n$ 行 $1$ 列。
 
 $$
-\begin{bmatrix}w_1\\w_2\\\vdots\\w_n\end{bmatrix}
+\begin{bmatrix}w_1 \\ w_2 \\ \vdots
+\\
+w_n\end{bmatrix}
 $$
 
 

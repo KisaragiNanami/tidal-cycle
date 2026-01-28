@@ -22,7 +22,9 @@ DP 需要一定的顺序。和树形 DP 一样设子树信息为状态？不行�
 于是就有了状态。设 $f(i,S)$ 为联通的节点集合为 $S$，当前生成树高度为 $i$ 时，需要的最小代价。由于可以免费打通一个点，不难想到边界为
 
 $$
-f(i,S) = \begin{cases}0 & i=1, |S|=1 \\\infty & \text{otherwise}\end{cases}
+f(i,S) = \begin{cases}0 & i=1, |S|=1
+\\
+\infty & \text{otherwise}\end{cases}
 $$
 
 

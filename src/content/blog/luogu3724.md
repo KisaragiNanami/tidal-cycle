@@ -21,7 +21,9 @@ description: 'Solution'
 设 $f_{i,j}$ 为考虑前 $i$ 天，空出来了 $j$ 天，所剩下的最大体力。
 
 $$
-f_{i,j} = \max\begin{cases}\min(f_{i-1,j} - a_i + w_i,mc) & f_{i-1,j} \ge a_i\\f_{i-1,j-1} - a_i & f_{i-1,j-1} \ge a_i\end{cases}
+f_{i,j} = \max\begin{cases}\min(f_{i-1,j} - a_i + w_i,mc) & f_{i-1,j} \ge a_i
+\\
+f_{i-1,j-1} - a_i & f_{i-1,j-1} \ge a_i\end{cases}
 $$
 
 

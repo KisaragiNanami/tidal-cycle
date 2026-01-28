@@ -48,7 +48,20 @@ $$
 我们搞一个大小为 $(2n+1) \times 1$ 的向量出来。 
 
 $$
-\begin{bmatrix}f(i-1,1)\\f(i-1,2)\\\vdots\\f(i,1)\\f(i,2)\\\vdots\\ans\end{bmatrix}
+\begin{bmatrix}f(i-1,1)
+\\
+f(i-1,2)
+\\
+\vdots
+\\
+f(i,1)
+\\
+f(i,2)
+\\
+\vdots
+\\
+ans
+\end{bmatrix}
 $$
 
 

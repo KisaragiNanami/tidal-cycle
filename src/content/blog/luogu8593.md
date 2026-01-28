@@ -26,7 +26,7 @@ $x_i< x_j$
 此时的方程是
 
 $$
-\begin{aligned}x_j - x_i & \le (v_i - v_j) k_i\\x_j + k_i v_j & \le x_i + k_i v_i\end{aligned}
+\begin{aligned}x_j - x_i & \le (v_i - v_j) k_i \\ x_j + k_i v_j & \le x_i + k_i v_i\end{aligned}
 $$
 
 
@@ -36,7 +36,7 @@ $x_i > x_j$
 此时
 
 $$
-\begin{aligned}x_i - x_j & \le (v_j - v_i)k_i\\x_i + v_ik_i & \le x_j + k_iv_j
+\begin{aligned}x_i - x_j & \le (v_j - v_i)k_i \\ x_i + v_ik_i & \le x_j + k_iv_j
 
 \end{aligned}
 $$

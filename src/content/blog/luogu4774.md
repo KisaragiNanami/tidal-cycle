@@ -16,7 +16,13 @@ pubDate: 2022-08-09
 那么问题转化为求解
 
 $$
-\left\{\begin{array}{l}atk_1 \cdot x &\equiv a_1 \pmod{p_1}\\atk_2 \cdot x &\equiv a_2 \pmod{p_2}\\&\vdots\\atk_n \cdot x &\equiv a_n \pmod{p_2}\end{array}\right.
+\left\{\begin{array}{l}atk_1 \cdot x &\equiv a_1 \pmod{p_1}
+\\
+atk_2 \cdot x &\equiv a_2 \pmod{p_2}
+\\
+&\vdots
+\\
+atk_n \cdot x &\equiv a_n \pmod{p_2}\end{array}\right.
 $$
 
 

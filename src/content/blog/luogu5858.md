@@ -14,7 +14,7 @@ pubDate: 2022-01-23
 边界
 
 $$
-f_{i,j}= \begin{cases}0 & i=0,j=0 \\-\inf & \text{otherwise}\end{cases}
+f_{i,j}= \begin{cases}0 & i=0,j=0 \\ -\inf & \text{otherwise}\end{cases}
 $$
 
 

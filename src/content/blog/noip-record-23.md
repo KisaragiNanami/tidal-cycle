@@ -1,6 +1,6 @@
 ---
 title: 「NOIP Record」#23 贪心（2）
-pubDate: 2023-11-12
+pubDate: 2023-11-15
 tags:
   - 贪心
   - 并查集

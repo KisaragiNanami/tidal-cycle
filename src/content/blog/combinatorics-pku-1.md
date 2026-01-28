@@ -120,7 +120,11 @@ $$
 枚举二者再推式子。
 
 $$
-\begin{align*}\sum_{i=0}^n \sum_{j=0}^m \binom{i+j}{i} - 1 &= \sum_{i=0}^n \binom{i+m+1}{i+1} -1\\&= \sum_{i=1}^{n+1} \binom{i+m}{m} - 1\\&= \binom{n+m+2}{m+1}-2\end{align*}
+\begin{align*}\sum_{i=0}^n \sum_{j=0}^m \binom{i+j}{i} - 1 &= \sum_{i=0}^n \binom{i+m+1}{i+1} -1
+\\
+&= \sum_{i=1}^{n+1} \binom{i+m}{m} - 1
+\\
+&= \binom{n+m+2}{m+1}-2\end{align*}
 $$
 
 
@@ -162,7 +166,13 @@ $$
 记 $a_n= \sum_{k=0}^n \binom{n+k}{n}2^{-k}$，则
 
 $$
-\begin{align*}a_n &= \sum_{k=0}^{n} \binom{n+k}{n}2^{-k}\\&= \sum_{k=0}^{n} \left(\binom{n+k-1}{n-1}+\binom{n+k-1}{n} \right) 2^{-k}\\&= \sum_{k=0}^{n} \binom{n+k-1}{n-1}2^{-k} + \sum_{k=0}^n \binom{n+k}{n}2^{-(k+1)}\\&= a_{n-1}+ \frac{1}{2}a_n\end{align*}
+\begin{align*}a_n &= \sum_{k=0}^{n} \binom{n+k}{n}2^{-k}
+\\
+&= \sum_{k=0}^{n} \left(\binom{n+k-1}{n-1}+\binom{n+k-1}{n} \right) 2^{-k}
+\\
+&= \sum_{k=0}^{n} \binom{n+k-1}{n-1}2^{-k} + \sum_{k=0}^n \binom{n+k}{n}2^{-(k+1)}
+\\
+&= a_{n-1}+ \frac{1}{2}a_n\end{align*}
 $$
 
 
@@ -182,7 +192,9 @@ $$
 对于右边，以 $x^{l+k}$ 为主元，枚举 $(1+x)^{n+l}$ 的贡献 $x^i$，故技重施，得到
 
 $$
-\begin{align*}\sum_{i=l}^{n+l} \binom{n+l}{i} \binom{k}{l+k-i}\binom{i}{l} &= \sum_{i=0}^{n} \binom{n+l}{i+l}\binom{k}{k-i}\binom{i+l}{l}\\&= \sum_{i=0}^{n}\binom{n+l}{l}\binom{n}{i}\binom{k}{k-i}\\&= \binom{n+l}{l}\binom{n+k}{k}\end{align*}
+\begin{align*}\sum_{i=l}^{n+l} \binom{n+l}{i} \binom{k}{l+k-i}\binom{i}{l} &= \sum_{i=0}^{n} \binom{n+l}{i+l}\binom{k}{k-i}\binom{i+l}{l} &= \sum_{i=0}^{n}\binom{n+l}{l}\binom{n}{i}\binom{k}{k-i}
+\\
+&= \binom{n+l}{l}\binom{n+k}{k}\end{align*}
 $$
 
 

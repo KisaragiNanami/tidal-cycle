@@ -1,7 +1,7 @@
 // src/config.ts
 // 针对博主特定的数据
 export const ADMIN_USER = {
-  nickname: "如月七海",
+  nickname: "Nanami^2",
   email: "2959874980@qq.com",
   website: "https://nanami7.top",
   avatar: "/avatar.webp",
@@ -11,7 +11,10 @@ export const ADMIN_USER = {
 export const SENSITIVE_USERS = [
   "KisaragiNanami",
   "Nanami7",
-  "kisaraginanami",
+  "Nanami^2",
+  "nanami7",
+  "nanami^2",
+  "kisaragi_nanami",
   "如月七海",
   "七海七海",
   "admin",

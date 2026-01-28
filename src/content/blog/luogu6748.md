@@ -23,7 +23,7 @@ $\texttt{analysis}$
 考虑 $x$ 的子节点 $y$，分类讨论一下其对 $0$ 和 $1$ 状态的贡献 $g_{0/1}$，那么 $f(x,0)$ 能取 $t$ 个 $g_1$，$f(x,1)$ 少 $1$ 个。
 
 $$
-g_0 = \begin{cases}\max\Big(f(y,0)+a_y, f(y,1)+a_x\Big) & a_y \le a_x\\\max\Big(f(y,0)+a_x, f(y,1)+a_x \Big) & a_y > a_x\end{cases}
+g_0 = \begin{cases}\max\Big(f(y,0)+a_y, f(y,1)+a_x\Big) & a_y \le a_x \\ \max\Big(f(y,0)+a_x, f(y,1)+a_x \Big) & a_y > a_x\end{cases}
 $$
 
 

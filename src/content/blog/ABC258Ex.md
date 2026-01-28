@@ -59,7 +59,18 @@ f_i = g_{i-1}
 g_i = f_{i-1}
 \end{cases}
 \Longrightarrow B 
-\begin{bmatrix} f_{i-1} \\ g_{i-1} \end{bmatrix} = \begin{bmatrix} f_i \\ g_i \end{bmatrix}
+
+\begin{bmatrix}
+f_{i-1}
+\\
+g_{i-1}
+\end{bmatrix} =
+
+\begin{bmatrix}
+f_i
+\\
+g_i
+\end{bmatrix}
 $$
 
 
